@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RXy+ | Premium Supplements & Blood Testing</title>
+    <meta
+      name="description"
+      content="Clean, modern ecommerce homepage inspired by premium supplement stores."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- ===================== 1. TOP PROMO BAR ===================== -->
+    <div class="promo-bar" role="status" aria-live="polite">
+      <div class="container promo-inner">
+        <p class="promo-left">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Free standard delivery on £50 spend
+        </p>
+        <div class="promo-right">
+          <span class="promo-rotate" id="promoRotate">Extra 15% off via App</span>
+          <span class="promo-divider" aria-hidden="true">|</span>
+          <span class="countdown" id="countdown">Ends in: --:--:--</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== 2. HEADER / STICKY NAV ===================== -->
+    <header class="site-header" id="top">
+      <div class="container nav-row">
+        <!-- Logo -->
+        <a href="#" class="logo" aria-label="RXy+ home">RXy+</a>
+
+        <!-- Desktop nav -->
+        <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown">
+              <button class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                Protein <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="dropdown" role="menu">
+                <a href="#" role="menuitem">Whey Protein</a>
+                <a href="#" role="menuitem">Clear Whey</a>
+                <a href="#" role="menuitem">Vegan Protein</a>
+                <a href="#" role="menuitem">Protein Bars</a>
+                <a href="#" role="menuitem">All Protein</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <button class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                Supplements <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="dropdown" role="menu">
+                <a href="#" role="menuitem">Creatine</a>
+                <a href="#" role="menuitem">Pre-Workout</a>
+                <a href="#" role="menuitem">BCAAs</a>
+                <a href="#" role="menuitem">Omega 3</a>
+                <a href="#" role="menuitem">All Supplements</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <button class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                Vitamins <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="dropdown" role="menu">
+                <a href="#" role="menuitem">Vitamin D</a>
+                <a href="#" role="menuitem">Vitamin C</a>
+                <a href="#" role="menuitem">Multivitamins</a>
+                <a href="#" role="menuitem">Zinc</a>
+                <a href="#" role="menuitem">All Vitamins</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <button class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                Bars &amp; Snacks <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="dropdown" role="menu">
+                <a href="#" role="menuitem">Protein Bars</a>
+                <a href="#" role="menuitem">Snack Packs</a>
+                <a href="#" role="menuitem">Oat Products</a>
+                <a href="#" role="menuitem">All Bars &amp; Snacks</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Accessories</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Collabs</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link--sale">Clearance</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right icons -->
+        <div class="nav-icons">
+          <div class="search-wrap">
+            <button class="search-toggle-btn" id="searchToggle" aria-label="Open search" aria-expanded="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+            <div class="search-box" id="searchBox" aria-hidden="true">
+              <form class="search-form" role="search" action="#" method="get">
+                <input type="search" name="q" placeholder="Search products…" aria-label="Search products" autocomplete="off" id="searchInput" />
+                <button type="submit" aria-label="Submit search">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+          <a href="#" class="icon-btn" aria-label="Account">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </a>
+          <a href="#" class="icon-btn cart-btn" aria-label="Basket (0 items)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-count" aria-hidden="true">0</span>
+          </a>
+          <button class="hamburger" id="hamburgerBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+        <ul class="mobile-nav-list">
+          <li><a href="#" class="mobile-nav-link">Protein</a></li>
+          <li><a href="#" class="mobile-nav-link">Supplements</a></li>
+          <li><a href="#" class="mobile-nav-link">Vitamins</a></li>
+          <li><a href="#" class="mobile-nav-link">Bars &amp; Snacks</a></li>
+          <li><a href="#" class="mobile-nav-link">Accessories</a></li>
+          <li><a href="#" class="mobile-nav-link">Collabs</a></li>
+          <li><a href="#" class="mobile-nav-link mobile-nav-link--sale">Clearance</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main id="main-content">
+
+      <!-- ===================== 3. HERO BANNER ===================== -->
+      <section class="hero" aria-label="Payday Sale promotion">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <span class="hero-tag">PAYDAY SALE</span>
+            <h1 class="hero-title">UP TO <strong>70% OFF</strong></h1>
+            <p class="hero-sub">+ EXTRA 20% OFF SUMMER ESSENTIAL SUPPLEMENTS</p>
+            <p class="hero-code">USE CODE <strong>'PAYDAY'</strong></p>
+            <a href="#categories" class="btn btn-hero smooth-scroll">Shop Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== USP BAR ===================== -->
+      <div class="usp-bar">
+        <div class="container usp-inner">
+          <div class="usp-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <span>Free delivery on £50 spend</span>
+          </div>
+          <div class="usp-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+            <span>Extra 15% off via App</span>
+          </div>
+          <div class="usp-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+            <span>Earn £15 credit with referrals</span>
+          </div>
+          <div class="usp-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Crafted by Healthcare Professionals</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== 4. CATEGORY GRID ===================== -->
+      <section class="section" id="categories" aria-labelledby="cat-title">
+        <div class="container">
+          <h2 class="section-title" id="cat-title">Shop by Category</h2>
+          <div class="category-grid">
+            <a href="#products" class="cat-tile smooth-scroll" aria-label="Shop Protein">
+              <div class="cat-img cat-img--protein"></div>
+              <div class="cat-info"><h3>Protein</h3><span class="cat-cta">Shop Now →</span></div>
+            </a>
+            <a href="#products" class="cat-tile smooth-scroll" aria-label="Shop Creatine">
+              <div class="cat-img cat-img--creatine"></div>
+              <div class="cat-info"><h3>Creatine</h3><span class="cat-cta">Shop Now →</span></div>
+            </a>
+            <a href="#newin" class="cat-tile smooth-scroll" aria-label="Shop Activewear">
+              <div class="cat-img cat-img--activewear"></div>
+              <div class="cat-info"><h3>Activewear</h3><span class="cat-cta">Shop Now →</span></div>
+            </a>
+            <a href="#products" class="cat-tile smooth-scroll" aria-label="Shop Bars, Food & Snacks">
+              <div class="cat-img cat-img--bars"></div>
+              <div class="cat-info"><h3>Bars, Food &amp; Snacks</h3><span class="cat-cta">Shop Now →</span></div>
+            </a>
+            <a href="#products" class="cat-tile smooth-scroll" aria-label="Shop Vitamins">
+              <div class="cat-img cat-img--vitamins"></div>
+              <div class="cat-info"><h3>Vitamins</h3><span class="cat-cta">Shop Now →</span></div>
+            </a>
+            <a href="#products" class="cat-tile smooth-scroll" aria-label="Shop Pre-Workout">
+              <div class="cat-img cat-img--preworkout"></div>
+              <div class="cat-info"><h3>Pre-Workout</h3><span class="cat-cta">Shop Now →</span></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 5. BEST SELLERS ===================== -->
+      <section class="section section--grey" id="products" aria-labelledby="bs-title">
+        <div class="container">
+          <h2 class="section-title" id="bs-title">Best Sellers</h2>
+          <div class="product-grid">
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <span class="badge badge--sale">-20%</span>
+                <img src="https://images.unsplash.com/photo-1584124864456-cbbf17f3049e?w=520&h=420&fit=crop" alt="Clear Whey Isolate" loading="lazy" />
+              </div>
+              <div class="product-body">
+                <p class="product-cat">Protein</p>
+                <h3 class="product-name">Clear Whey Isolate</h3>
+                <div class="product-price">
+                  <span class="price-now">£27.99</span>
+                  <span class="price-was">£34.99</span>
+                  <span class="price-save">Save £7.00</span>
+                </div>
+                <button class="btn btn-quick" data-product="Clear Whey Isolate">Quick Buy</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <span class="badge badge--new">NEW</span>
+                <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=520&h=420&fit=crop" alt="Impact Whey Protein" loading="lazy" />
+              </div>
+              <div class="product-body">
+                <p class="product-cat">Protein</p>
+                <h3 class="product-name">Impact Whey Protein</h3>
+                <div class="product-price">
+                  <span class="price-now">£23.49</span>
+                  <span class="price-was">£27.49</span>
+                  <span class="price-save">Save £4.00</span>
+                </div>
+                <button class="btn btn-quick" data-product="Impact Whey Protein">Quick Buy</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <span class="badge badge--sale">-10%</span>
+                <img src="https://images.unsplash.com/photo-1599599810694-c6d7e5e0db42?w=520&h=420&fit=crop" alt="Creatine Monohydrate" loading="lazy" />
+              </div>
+              <div class="product-body">
+                <p class="product-cat">Supplements</p>
+                <h3 class="product-name">Creatine Monohydrate</h3>
+                <div class="product-price">
+                  <span class="price-now">£17.99</span>
+                  <span class="price-was">£19.99</span>
+                  <span class="price-save">Save £2.00</span>
+                </div>
+                <button class="btn btn-quick" data-product="Creatine Monohydrate">Quick Buy</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <span class="badge badge--sale">-25%</span>
+                <img src="https://images.unsplash.com/photo-1604054609358-4e6adf11ea1c?w=520&h=420&fit=crop" alt="Pre-Workout Blend" loading="lazy" />
+              </div>
+              <div class="product-body">
+                <p class="product-cat">Pre-Workout</p>
+                <h3 class="product-name">Pre-Workout Blend</h3>
+                <div class="product-price">
+                  <span class="price-now">£21.99</span>
+                  <span class="price-was">£29.49</span>
+                  <span class="price-save">Save £7.50</span>
+                </div>
+                <button class="btn btn-quick" data-product="Pre-Workout Blend">Quick Buy</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <span class="badge badge--bestseller">BESTSELLER</span>
+                <img src="https://images.unsplash.com/photo-1631730486211-55dd35e39c5f?w=520&h=420&fit=crop" alt="Multivitamin Complex" loading="lazy" />
+              </div>
+              <div class="product-body">
+                <p class="product-cat">Vitamins</p>
+                <h3 class="product-name">Multivitamin Complex</h3>
+                <div class="product-price">
+                  <span class="price-now">£17.99</span>
+                  <span class="price-was">£21.99</span>
+                  <span class="price-save">Save £4.00</span>
+                </div>
+                <button class="btn btn-quick" data-product="Multivitamin Complex">Quick Buy</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=520&h=420&fit=crop" alt="Protein Bars Mix" loading="lazy" />
+              </div>
+              <div class="product-body">
+                <p class="product-cat">Bars &amp; Snacks</p>
+                <h3 class="product-name">Protein Bars Mix</h3>
+                <div class="product-price">
+                  <span class="price-now">£21.99</span>
+                  <span class="price-was">£24.99</span>
+                  <span class="price-save">Save £3.00</span>
+                </div>
+                <button class="btn btn-quick" data-product="Protein Bars Mix">Quick Buy</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <span class="badge badge--new">NEW</span>
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=520&h=420&fit=crop" alt="Blood Testing Kit" loading="lazy" />
+              </div>
+              <div class="product-body">
+                <p class="product-cat">Health</p>
+                <h3 class="product-name">Blood Testing Kit</h3>
+                <div class="product-price">
+                  <span class="price-now">£79.99</span>
+                </div>
+                <button class="btn btn-quick" data-product="Blood Testing Kit">Quick Buy</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <span class="badge badge--sale">-15%</span>
+                <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=520&h=420&fit=crop" alt="BCAA Energy Drink" loading="lazy" />
+              </div>
+              <div class="product-body">
+                <p class="product-cat">Supplements</p>
+                <h3 class="product-name">BCAA Energy Drink</h3>
+                <div class="product-price">
+                  <span class="price-now">£18.99</span>
+                  <span class="price-was">£22.49</span>
+                  <span class="price-save">Save £3.50</span>
+                </div>
+                <button class="btn btn-quick" data-product="BCAA Energy Drink">Quick Buy</button>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 6. NEW IN ACTIVEWEAR ===================== -->
+      <section class="section" id="newin" aria-labelledby="newin-title">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" id="newin-title">New In Activewear</h2>
+            <div class="carousel-controls">
+              <button class="carousel-btn" id="carouselPrev" aria-label="Previous items">&#8592;</button>
+              <button class="carousel-btn" id="carouselNext" aria-label="Next items">&#8594;</button>
+            </div>
+          </div>
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carouselTrack">
+
+              <div class="activewear-card">
+                <div class="activewear-img activewear-img--vest">
+                  <span class="badge badge--new">NEW</span>
+                </div>
+                <div class="activewear-body">
+                  <h3>High Neck Vest</h3>
+                  <p class="activewear-price">£22.99</p>
+                  <a href="#" class="btn btn-outline">Shop Now</a>
+                </div>
+              </div>
+
+              <div class="activewear-card">
+                <div class="activewear-img activewear-img--shorts">
+                  <span class="badge badge--new">NEW</span>
+                </div>
+                <div class="activewear-body">
+                  <h3>2-in-1 Floaty Shorts</h3>
+                  <p class="activewear-price">£27.99</p>
+                  <a href="#" class="btn btn-outline">Shop Now</a>
+                </div>
+              </div>
+
+              <div class="activewear-card">
+                <div class="activewear-img activewear-img--hoodie">
+                  <span class="badge badge--new">NEW</span>
+                </div>
+                <div class="activewear-body">
+                  <h3>Oversized Hoodie</h3>
+                  <p class="activewear-price">£44.99</p>
+                  <a href="#" class="btn btn-outline">Shop Now</a>
+                </div>
+              </div>
+
+              <div class="activewear-card">
+                <div class="activewear-img activewear-img--jacket">
+                  <span class="badge badge--new">NEW</span>
+                </div>
+                <div class="activewear-body">
+                  <h3>Cropped Jacket</h3>
+                  <p class="activewear-price">£49.99</p>
+                  <a href="#" class="btn btn-outline">Shop Now</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== NEWSLETTER ===================== -->
+      <section class="section section--blue" aria-labelledby="nl-title">
+        <div class="container newsletter-inner">
+          <div class="newsletter-text">
+            <h2 id="nl-title">Join 100k+ Customers</h2>
+            <p>Get 20% off your first order + exclusive deals straight to your inbox.</p>
+          </div>
+          <form class="newsletter-form" action="#" method="post" novalidate>
+            <input type="email" name="email" placeholder="Enter your email address" aria-label="Email address" required />
+            <button type="submit" class="btn btn-white">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===================== 7. FOOTER ===================== -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container footer-grid">
+
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            Help &amp; Information
+            <button class="footer-toggle" aria-expanded="false" aria-label="Toggle Help & Information">+</button>
+          </h4>
+          <ul class="footer-list" role="list">
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Track my order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            Products
+            <button class="footer-toggle" aria-expanded="false" aria-label="Toggle Products">+</button>
+          </h4>
+          <ul class="footer-list" role="list">
+            <li><a href="#">Protein</a></li>
+            <li><a href="#">Activewear</a></li>
+            <li><a href="#">Snacks</a></li>
+            <li><a href="#">Nutrition</a></li>
+            <li><a href="#">Vitamins</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            Company Information
+            <button class="footer-toggle" aria-expanded="false" aria-label="Toggle Company Information">+</button>
+          </h4>
+          <ul class="footer-list" role="list">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            Loyalty &amp; Rewards
+            <button class="footer-toggle" aria-expanded="false" aria-label="Toggle Loyalty & Rewards">+</button>
+          </h4>
+          <ul class="footer-list" role="list">
+            <li><a href="#">Refer a friend</a></li>
+            <li><a href="#">Earn £15</a></li>
+            <li><a href="#">Student discounts</a></li>
+            <li><a href="#">Key worker discounts</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; 2026 RXy+ Ltd. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Quick Buy Toast -->
+    <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  </body>
+</html>
