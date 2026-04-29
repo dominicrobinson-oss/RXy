@@ -11,16 +11,16 @@ export default function HeroBanner() {
           alt="Payday sale hero"
           fill
           priority
-          className="object-cover opacity-70"
+          className="object-cover opacity-50"
         />
       </div>
 
-      <div className="relative mx-auto flex max-w-6xl flex-col gap-4 px-4 py-16 sm:px-6 sm:py-20 lg:flex-row lg:items-center lg:py-24">
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-4 px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:flex-row lg:items-center lg:py-20">
         <div className="max-w-xl">
           <p className="mb-2 text-xs font-semibold tracking-[0.2em] text-[#00d4ff]">
             PAYDAY SALE
           </p>
-          <h1 className="text-3xl font-extrabold uppercase sm:text-4xl lg:text-5xl">
+          <h1 className="text-3xl font-bold uppercase tracking-[0.02em] sm:text-4xl lg:text-5xl">
             Up to <span className="text-[#00d4ff]">70% off</span>
             <br />
             + extra 20% off

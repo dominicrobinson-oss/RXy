@@ -76,10 +76,10 @@ function Stars({ rating }: { rating: number }) {
 
 export default function BestSellers() {
   return (
-    <section className="bg-slate-50 py-10">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="mb-4 flex items-baseline justify-between">
-          <h2 className="text-xl font-bold uppercase tracking-wide">
+    <section className="bg-slate-50 py-14 md:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-5 flex items-baseline justify-between">
+          <h2 className="text-xl font-semibold uppercase tracking-[0.08em] text-slate-800 md:text-2xl">
             Best sellers
           </h2>
           <button className="text-xs font-semibold uppercase tracking-wide text-[#0071e3] hover:underline">
@@ -87,18 +87,18 @@ export default function BestSellers() {
           </button>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {products.map((p) => (
             <div
               key={p.id}
               className="flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="relative h-48 bg-slate-100">
+              <div className="relative aspect-[4/5] bg-slate-100">
                 <Image
                   src={p.image}
                   alt={p.name}
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
                 {p.badge && (
                   <span className="absolute left-2 top-2 rounded-full bg-[#0071e3] px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
@@ -112,7 +112,7 @@ export default function BestSellers() {
                 )}
               </div>
 
-              <div className="flex flex-1 flex-col gap-1 p-3 text-sm">
+              <div className="flex flex-1 flex-col gap-1 p-3.5 text-sm">
                 <h3 className="line-clamp-2 text-[13px] font-semibold">
                   {p.name}
                 </h3>

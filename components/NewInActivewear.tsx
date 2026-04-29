@@ -41,10 +41,10 @@ const items: Item[] = [
 
 export default function NewInActivewear() {
   return (
-    <section className="bg-white py-10">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="mb-4 flex items-baseline justify-between">
-          <h2 className="text-xl font-bold uppercase tracking-wide">
+    <section className="bg-white py-14 md:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-5 flex items-baseline justify-between">
+          <h2 className="text-xl font-semibold uppercase tracking-[0.08em] text-slate-800 md:text-2xl">
             New in activewear
           </h2>
           <button className="text-xs font-semibold uppercase tracking-wide text-[#0071e3] hover:underline">
@@ -52,18 +52,18 @@ export default function NewInActivewear() {
           </button>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {items.map((item) => (
             <div
               key={item.id}
               className="flex flex-col overflow-hidden rounded-lg bg-slate-50 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="relative h-52 bg-slate-200">
+              <div className="relative aspect-[4/5] bg-slate-200">
                 <Image
                   src={item.image}
                   alt={item.name}
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
                 {item.tag && (
                   <span className="absolute left-2 top-2 rounded-full bg-black/80 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
@@ -71,7 +71,7 @@ export default function NewInActivewear() {
                   </span>
                 )}
               </div>
-              <div className="flex flex-1 flex-col gap-1 p-3 text-sm">
+              <div className="flex flex-1 flex-col gap-1 p-3.5 text-sm">
                 <h3 className="line-clamp-2 text-[13px] font-semibold">
                   {item.name}
                 </h3>

@@ -11,16 +11,16 @@ import Image from "next/image";
 
 export default function CategoryGrid() {
   return (
-    <section className="bg-white py-10">
+    <section className="bg-white py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="mb-4 text-xl font-bold uppercase tracking-wide">
+        <h2 className="mb-4 text-xl font-bold uppercase tracking-wider">
           Shop by category
         </h2>
         <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {categories.map((cat) => (
             <button
               key={cat.name}
-              className="group relative flex aspect-[3/4] flex-col overflow-hidden rounded-lg bg-slate-100 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              className="group relative flex aspect-[4/5] flex-col overflow-hidden rounded-lg bg-slate-100 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
               <Image
                 src={cat.image}

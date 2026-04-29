@@ -1,79 +1,77 @@
 'use client';
 
-import { Search } from 'lucide-react';
+import { Search, User, ShoppingBag } from 'lucide-react';
 
-const categories = [
-  'Brands A–Z',
-  'Best Sellers',
-  'New Season',
-  'Outlet',
-  'Nutrition',
-  'Personal Care',
-  'Technology',
+const primaryTabs = ['Nutrition', 'Clothing', 'Brands'];
+
+const secondaryTabs = [
+  'Trending',
+  'Protein',
+  'Supplements',
+  'Vitamins',
+  'Bars, Snacks & Foods',
   'Accessories',
-  'Footwear',
-  'Clothing',
-  'Equipment',
+  'Collabs',
+  'Clearance',
 ];
 
 export default function Navigation() {
   return (
     <nav className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center gap-4 border-b border-gray-200 overflow-x-auto no-scrollbar">
-        {categories.map((cat) => (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4 border-b border-gray-200">
+        <div className="flex items-center gap-6 lg:gap-8 min-w-0">
           <a
-            key={cat}
             href="#"
-            className="py-1.5 text-[11px] md:text-[13px] font-semibold text-[#103f4c] whitespace-nowrap hover:text-black transition tracking-[0.01em]"
+            className="text-[34px] leading-none font-black tracking-[0.12em] text-[#0b4b59] whitespace-nowrap"
           >
-            {cat}
+            MYPROTEIN
           </a>
-        ))}
 
-        <div className="ml-auto flex items-center gap-2 shrink-0">
-          <button className="flex items-center gap-2 border border-gray-300 rounded-full px-3 py-1.5 text-xs text-gray-700">
-            <Search size={14} className="text-[#e85d2a]" />
-            <span className="hidden sm:inline">Search</span>
+          <div className="hidden md:flex items-center gap-3 lg:gap-4">
+            {primaryTabs.map((tab, index) => (
+              <a
+                key={tab}
+                href="#"
+                className={`rounded-full px-5 py-2 text-[13px] font-bold uppercase tracking-[0.05em] transition ${
+                  index === 0
+                    ? 'border border-[#e85d2a] text-[#0b4b59]'
+                    : 'text-[#0b4b59] hover:text-black'
+                }`}
+              >
+                {tab}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3 shrink-0">
+          <button className="hidden md:flex items-center gap-2 border border-gray-300 rounded-full pl-3 pr-2.5 py-1.5 text-sm text-gray-700">
+            <Search size={16} className="text-[#e85d2a]" />
+            <span>Search</span>
+            <span className="rounded-full border border-[#0b4b59] px-2 py-0.5 text-[11px] font-semibold text-[#0b4b59]">
+              Fuel Coach
+            </span>
           </button>
-          <span className="text-[11px] px-2.5 py-1 rounded-full bg-gray-100 border border-gray-300 text-gray-700 font-semibold">
-            AI Assistant
-          </span>
+
+          <button className="text-[#0b4b59] hover:text-black" aria-label="Account">
+            <User size={20} />
+          </button>
+          <button className="text-[#0b4b59] hover:text-black" aria-label="Basket">
+            <ShoppingBag size={20} />
+          </button>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-4 hidden lg:grid grid-cols-4 gap-6 text-sm bg-white shadow-[0_8px_18px_rgba(0,0,0,0.06)]">
-        <div>
-          <h3 className="font-bold text-[#0b4b59] mb-2">Nutrition</h3>
-          <ul className="space-y-1 text-gray-700">
-            <li><a href="#" className="hover:text-black">Protein Powders</a></li>
-            <li><a href="#" className="hover:text-black">Creatine</a></li>
-            <li><a href="#" className="hover:text-black">Pre-Workout</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="font-bold text-[#0b4b59] mb-2">Clothing</h3>
-          <ul className="space-y-1 text-gray-700">
-            <li><a href="#" className="hover:text-black">New In</a></li>
-            <li><a href="#" className="hover:text-black">Leggings</a></li>
-            <li><a href="#" className="hover:text-black">Hoodies</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="font-bold text-[#0b4b59] mb-2">Accessories</h3>
-          <ul className="space-y-1 text-gray-700">
-            <li><a href="#" className="hover:text-black">Shakers</a></li>
-            <li><a href="#" className="hover:text-black">Bottles</a></li>
-            <li><a href="#" className="hover:text-black">Gym Bags</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="font-bold text-[#0b4b59] mb-2">Brand Hub</h3>
-          <ul className="space-y-1 text-gray-700">
-            <li><a href="#" className="hover:text-black">What’s New</a></li>
-            <li><a href="#" className="hover:text-black">Gym Bag Essentials</a></li>
-            <li><a href="#" className="hover:text-black">FAQs</a></li>
-          </ul>
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center gap-6 overflow-x-auto no-scrollbar border-b border-[#e85d2a]">
+        {secondaryTabs.map((tab) => (
+          <a
+            key={tab}
+            href="#"
+            className="text-[12px] font-semibold text-[#0b4b59] whitespace-nowrap hover:text-black transition"
+          >
+            {tab}
+          </a>
+        ))}
       </div>
     </nav>
   );

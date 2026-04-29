@@ -19,13 +19,13 @@ const promos = [
 
 export default function PromoBlocks() {
   return (
-    <section className="bg-slate-50 py-10">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="grid gap-4 md:grid-cols-2">
+    <section className="bg-slate-50 py-14 md:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-5 md:grid-cols-2 lg:gap-6">
           {promos.map((promo) => (
             <div
               key={promo.id}
-              className="relative overflow-hidden rounded-lg bg-slate-900 text-white shadow-sm"
+              className="relative min-h-[300px] overflow-hidden rounded-lg bg-slate-900 text-white shadow-sm md:min-h-[340px]"
             >
               <div className="absolute inset-0">
                 <Image
@@ -35,8 +35,8 @@ export default function PromoBlocks() {
                   className="object-cover opacity-70"
                 />
               </div>
-              <div className="relative flex flex-col gap-2 p-6 sm:p-8">
-                <h3 className="text-lg font-bold uppercase tracking-wide">
+              <div className="relative flex h-full flex-col justify-end gap-2 p-6 text-left sm:p-8">
+                <h3 className="text-lg font-semibold uppercase tracking-[0.08em] text-slate-100 md:text-xl">
                   {promo.title}
                 </h3>
                 <p className="text-sm text-slate-100">{promo.text}</p>
