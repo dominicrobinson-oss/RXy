@@ -3,23 +3,23 @@
 import { Truck, Gift, Beaker, CheckCircle2 } from 'lucide-react';
 
 const usp = [
-  { icon: Truck, text: 'Crafted by Healthcare Professionals' },
-  { icon: Gift, text: 'Subscribe & Save 15%' },
-  { icon: Beaker, text: 'Lab Tested & Verified' },
-  { icon: CheckCircle2, text: '100% Money Back Guarantee' },
+  { icon: Truck, text: 'Free standard delivery on £50 spend' },
+  { icon: Gift, text: 'Extra 15% off via App' },
+  { icon: Beaker, text: 'Earn £15 Credit?' },
+  { icon: CheckCircle2, text: 'Over 210k reviews & 4.4 rated' },
 ];
 
 export default function USPBar() {
   return (
-    <section className="bg-gray-50 py-8 border-y">
+    <section className="bg-gray-100 py-2 border-y border-gray-200">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-2">
           {usp.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div key={idx} className="flex items-center gap-3">
-                <Icon size={32} className="text-blue-600" />
-                <p className="text-sm font-semibold text-gray-800">{item.text}</p>
+              <div key={idx} className="flex items-center gap-2">
+                <Icon size={16} className="text-blue-600 shrink-0" />
+                <p className="text-[11px] md:text-[13px] font-semibold text-gray-800 leading-tight">{item.text}</p>
               </div>
             );
           })}

@@ -3,6 +3,7 @@ export interface Product {
   name: string;
   description: string;
   price: number;
+  oldPrice?: number;
   image: string;
   category: string;
   badge?: "bestseller" | "sale" | "new";

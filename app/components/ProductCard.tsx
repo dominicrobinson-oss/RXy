@@ -5,10 +5,12 @@ import { ShoppingCart } from 'lucide-react';
 import type { Product } from '../types';
 
 export default function ProductCard({ product }: { product: Product }) {
+  const save = product.oldPrice ? (product.oldPrice - product.price) / 100 : null;
+
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition bg-white">
+    <div className="border border-gray-200 rounded-md overflow-hidden hover:shadow-md transition bg-white h-full flex flex-col">
       {/* Image Container */}
-      <div className="relative bg-gray-100 h-48 overflow-hidden">
+      <div className="relative bg-gray-100 h-44 overflow-hidden">
         <Image
           src={product.image}
           alt={product.name}
@@ -26,20 +28,31 @@ export default function ProductCard({ product }: { product: Product }) {
           </span>
         )}
       </div>
+      <div className="p-3.5 flex flex-col flex-1">
+        <p className="text-[11px] text-gray-500 uppercase tracking-wide">{product.category}</p>
+        <h3 className="font-semibold text-[15px] text-gray-900 mt-1 line-clamp-2 min-h-[44px]">{product.name}</h3>
 
-      {/* Content */}
-      <div className="p-4">
-        <p className="text-xs text-gray-500 uppercase">{product.category}</p>
-        <h3 className="font-semibold text-sm text-gray-800 mt-1 truncate">{product.name}</h3>
-        <p className="text-xs text-gray-600 mt-1 line-clamp-2">{product.description}</p>
-
-        {/* Price & Button */}
-        <div className="flex items-center justify-between mt-4">
-          <span className="text-lg font-bold text-blue-600">£{(product.price / 100).toFixed(2)}</span>
-          <button className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition" aria-label={`Add ${product.name} to basket`}>
-            <ShoppingCart size={16} />
-          </button>
+        <div className="mt-2 space-y-1 min-h-[58px]">
+          <p className="text-xl font-extrabold text-[#0066b3]">£{(product.price / 100).toFixed(2)}</p>
+          {product.oldPrice && (
+            <p className="text-xs text-gray-500">
+              Was <span className="line-through">£{(product.oldPrice / 100).toFixed(2)}</span>
+            </p>
+          )}
+          {save !== null && <p className="text-xs font-semibold text-red-600">Save £{save.toFixed(2)}</p>}
         </div>
+
+        <button
+          className="mt-3 w-full bg-[#003f4c] text-white py-2.5 rounded text-sm font-bold hover:bg-[#0a5462] transition flex items-center justify-center gap-2"
+          aria-label={`Add ${product.name} to basket`}
+        >
+          <ShoppingCart size={16} />
+          QUICK BUY
+        </button>
+
+        <p className="mt-2 text-[10px] leading-tight text-gray-500 uppercase">
+          Up to 70% off payday sale | Use code ‘PAYDAY’
+        </p>
       </div>
     </div>
   );

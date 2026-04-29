@@ -1,62 +1,69 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-[#1f1f1f] text-gray-300 mt-10">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Main Footer Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-          {/* Help */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
           <div>
-            <h3 className="font-bold text-white mb-4">Help</h3>
+            <h3 className="font-bold text-white mb-4 text-sm uppercase tracking-wide">Help & Information</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white">Contact Us</a></li>
-              <li><a href="#" className="hover:text-white">FAQs</a></li>
-              <li><a href="#" className="hover:text-white">Shipping Info</a></li>
+              <li><a href="#" className="hover:text-white">Contact us</a></li>
               <li><a href="#" className="hover:text-white">Returns</a></li>
+              <li><a href="#" className="hover:text-white">International delivery</a></li>
+              <li><a href="#" className="hover:text-white">Track my order</a></li>
+              <li><a href="#" className="hover:text-white">UK delivery</a></li>
             </ul>
           </div>
 
-          {/* Company */}
           <div>
-            <h3 className="font-bold text-white mb-4">Company</h3>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white">About Us</a></li>
-              <li><a href="#" className="hover:text-white">Careers</a></li>
-              <li><a href="#" className="hover:text-white">Press</a></li>
-              <li><a href="#" className="hover:text-white">Blog</a></li>
-            </ul>
-          </div>
-
-          {/* Products */}
-          <div>
-            <h3 className="font-bold text-white mb-4">Products</h3>
+            <h3 className="font-bold text-white mb-4 text-sm uppercase tracking-wide">Products</h3>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-white">Protein</a></li>
-              <li><a href="#" className="hover:text-white">Supplements</a></li>
+              <li><a href="#" className="hover:text-white">Activewear</a></li>
+              <li><a href="#" className="hover:text-white">Bars, drinks & snacks</a></li>
+              <li><a href="#" className="hover:text-white">Nutrition</a></li>
               <li><a href="#" className="hover:text-white">Vitamins</a></li>
-              <li><a href="#" className="hover:text-white">Blood Tests</a></li>
             </ul>
           </div>
 
-          {/* Social */}
           <div>
-            <h3 className="font-bold text-white mb-4">Follow Us</h3>
-            <div className="flex gap-4">
-              <a href="https://facebook.com" className="hover:text-white" aria-label="Facebook">f</a>
-              <a href="https://instagram.com" className="hover:text-white" aria-label="Instagram">📷</a>
-              <a href="https://twitter.com" className="hover:text-white" aria-label="Twitter">𝕏</a>
-              <a href="https://linkedin.com" className="hover:text-white" aria-label="LinkedIn">in</a>
-            </div>
+            <h3 className="font-bold text-white mb-4 text-sm uppercase tracking-wide">Company Information</h3>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="hover:text-white">About us</a></li>
+              <li><a href="#" className="hover:text-white">Quality assurance</a></li>
+              <li><a href="#" className="hover:text-white">Sustainability</a></li>
+              <li><a href="#" className="hover:text-white">Accessibility</a></li>
+              <li><a href="#" className="hover:text-white">Careers</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-white mb-4 text-sm uppercase tracking-wide">Loyalty & Rewards</h3>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="hover:text-white">Refer a friend</a></li>
+              <li><a href="#" className="hover:text-white">Discount codes</a></li>
+              <li><a href="#" className="hover:text-white">Students & graduate discounts</a></li>
+              <li><a href="#" className="hover:text-white">Key worker discounts</a></li>
+              <li><a href="#" className="hover:text-white">What Moves You</a></li>
+            </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>&copy; 2026 RXy+. All rights reserved.</p>
-          <div className="flex gap-6">
+        <div className="border-t border-gray-700 pt-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm">
+          <p>© 2026 RXy+ Ltd. All rights reserved.</p>
+          <div className="flex gap-5 text-xs text-gray-400 flex-wrap">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms & Conditions</a>
-            <a href="#" className="hover:text-white">Cookie Policy</a>
+            <a href="#" className="hover:text-white">Cookie Settings</a>
           </div>
+        </div>
+
+        <div className="mt-4 pt-4 border-t border-gray-800 flex items-center gap-2 text-[11px] text-gray-400 flex-wrap">
+          <span>Pay with:</span>
+          {['VISA', 'MC', 'PAYPAL', 'AMEX', 'APPLE PAY'].map((p) => (
+            <span key={p} className="px-2 py-1 rounded bg-gray-800 text-gray-200 text-[10px] font-semibold">
+              {p}
+            </span>
+          ))}
         </div>
       </div>
     </footer>

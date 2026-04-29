@@ -3,6 +3,7 @@ import {
   Navigation,
   HeroBanner,
   CategoryGrid,
+  NewInActivewear,
   ProductsGrid,
   PromoBanner,
   USPBar,
@@ -16,22 +17,22 @@ export default function Home() {
         <div className="divide-y divide-gray-200">
           <Header />
           <Navigation />
+          <USPBar />
+          <PromoBanner />
         </div>
       </div>
 
       <main className="flex-1">
-        <USPBar />
-
-        <PromoBanner />
-
         <HeroBanner />
 
         <CategoryGrid />
 
         <ProductsGrid />
 
+        <NewInActivewear />
+
         {/* Newsletter Section */}
-        <section className="bg-blue-50 py-12 border-y">
+        <section className="bg-blue-50 py-10 border-y">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <h2 className="text-2xl font-bold mb-2">Join 100k+ Customers</h2>
             <p className="text-gray-600 mb-6">Get 20% off your first order + exclusive deals</p>

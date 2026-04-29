@@ -8,3 +8,4 @@ export { default as PromoBanner } from './PromoBanner';
 export { default as USPBar } from './USPBar';
 export { default as Footer } from './Footer';
 export { default as ProductCard } from './ProductCard';
+export { default as NewInActivewear } from './NewInActivewear';
