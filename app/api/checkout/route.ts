@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '');
-
 type CheckoutItem = {
   name?: string;
   price?: number;
@@ -15,6 +13,16 @@ type CheckoutPayload = {
   amount?: number;
 };
 
+function getStripeClient() {
+  const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+
+  if (!stripeSecretKey) {
+    throw new Error('STRIPE_SECRET_KEY is not configured');
+  }
+
+  return new Stripe(stripeSecretKey);
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { email, items, amount }: CheckoutPayload = await req.json();
@@ -25,6 +33,8 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
+
+    const stripe = getStripeClient();
 
     // Create Stripe checkout session
     const session = await stripe.checkout.sessions.create({
