@@ -8,7 +8,7 @@ export default function ProductCard({ product }: { product: Product }) {
   const save = product.oldPrice ? (product.oldPrice - product.price) / 100 : null;
 
   return (
-    <div className="border border-gray-200 rounded-md overflow-hidden hover:shadow-md transition bg-white h-full flex flex-col">
+    <div className="border border-gray-200 rounded-md overflow-hidden hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)] transition bg-white h-full flex flex-col min-h-[430px]">
       {/* Image Container */}
       <div className="relative bg-gray-100 h-44 overflow-hidden">
         <Image
@@ -27,13 +27,32 @@ export default function ProductCard({ product }: { product: Product }) {
             {product.badge === 'sale' ? 'SALE' : product.badge === 'new' ? 'NEW' : 'BESTSELLER'}
           </span>
         )}
+
+        {product.freeDelivery && (
+          <span className="absolute left-3 top-3 px-2 py-1 rounded bg-white/95 text-[10px] font-bold text-[#0b4b59] border border-gray-200">
+            FREE DELIVERY
+          </span>
+        )}
       </div>
-      <div className="p-3.5 flex flex-col flex-1">
+
+      {product.promoRibbon && (
+        <div className="bg-[#0b4b59] text-white text-[10px] font-bold uppercase tracking-[0.06em] px-3 py-1.5">
+          {product.promoRibbon}
+        </div>
+      )}
+
+      <div className="p-4 flex flex-col flex-1">
         <p className="text-[11px] text-gray-500 uppercase tracking-wide">{product.category}</p>
         <h3 className="font-semibold text-[15px] text-gray-900 mt-1 line-clamp-2 min-h-[44px]">{product.name}</h3>
 
-        <div className="mt-2 space-y-1 min-h-[58px]">
-          <p className="text-xl font-extrabold text-[#0066b3]">£{(product.price / 100).toFixed(2)}</p>
+        {product.reviews && product.rating && (
+          <p className="text-xs text-gray-500 mt-1">
+            {product.rating.toFixed(2)} ★ ({product.reviews.toLocaleString()} reviews)
+          </p>
+        )}
+
+        <div className="mt-2 space-y-1 min-h-[64px]">
+          <p className="text-xl font-extrabold text-[#005ca8]">£{(product.price / 100).toFixed(2)}</p>
           {product.oldPrice && (
             <p className="text-xs text-gray-500">
               Was <span className="line-through">£{(product.oldPrice / 100).toFixed(2)}</span>

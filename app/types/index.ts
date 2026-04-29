@@ -7,6 +7,10 @@ export interface Product {
   image: string;
   category: string;
   badge?: "bestseller" | "sale" | "new";
+  reviews?: number;
+  rating?: number;
+  promoRibbon?: string;
+  freeDelivery?: boolean;
 }
 
 export interface CartItem {
