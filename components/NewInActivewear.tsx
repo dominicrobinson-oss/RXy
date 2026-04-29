@@ -52,7 +52,7 @@ export default function NewInActivewear() {
           </button>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <div className="grid gap-[22px] sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => (
             <div
               key={item.id}
@@ -63,7 +63,7 @@ export default function NewInActivewear() {
                   src={item.image}
                   alt={item.name}
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                 />
                 {item.tag && (
                   <span className="absolute left-2 top-2 rounded-full bg-black/80 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">

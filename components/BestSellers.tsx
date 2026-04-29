@@ -79,7 +79,7 @@ export default function BestSellers() {
     <section className="bg-slate-50 py-14 md:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-5 flex items-baseline justify-between">
-          <h2 className="text-xl font-semibold uppercase tracking-[0.08em] text-slate-800 md:text-2xl">
+          <h2 className="text-xl font-semibold uppercase tracking-[0.07em] text-slate-800 md:text-2xl">
             Best sellers
           </h2>
           <button className="text-xs font-semibold uppercase tracking-wide text-[#0071e3] hover:underline">
@@ -98,7 +98,7 @@ export default function BestSellers() {
                   src={p.image}
                   alt={p.name}
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-center scale-[1.005]"
                 />
                 {p.badge && (
                   <span className="absolute left-2 top-2 rounded-full bg-[#0071e3] px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
@@ -120,7 +120,7 @@ export default function BestSellers() {
                   {p.subtitle}
                 </p>
 
-                <div className="mt-1 flex items-center gap-2 text-[11px]">
+                <div className="mt-[6px] flex items-center gap-2 text-[11px]">
                   <Stars rating={p.rating} />
                   <span className="text-slate-500">
                     {p.rating.toFixed(1)} ({p.reviews.toLocaleString()})

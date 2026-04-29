@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#1f1f1f] text-gray-300 mt-14 border-t border-gray-700">
       <div className="max-w-7xl mx-auto px-4 py-14 sm:px-6 md:py-16 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-[38px] md:gap-[46px] mb-12 md:mb-14">
           <div>
             <h3 className="font-semibold text-white mb-4 text-[12px] uppercase tracking-[0.08em]">Help & Information</h3>
             <ul className="space-y-2 text-[13px]">
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-5 text-sm">
+        <div className="border-t border-gray-700 pt-[26px] flex flex-col md:flex-row items-start md:items-center justify-between gap-5 text-sm">
           <p>© 2026 RXy+ Ltd. All rights reserved.</p>
           <div className="flex gap-5 text-xs text-gray-400 flex-wrap">
             <a href="#" className="hover:text-white">Privacy Policy</a>
