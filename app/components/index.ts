@@ -11,4 +11,5 @@ export { default as USPBar } from './USPBar';
 export { default as Footer } from './Footer';
 export { default as ProductCard } from './ProductCard';
 export { default as NewInActivewear } from './NewInActivewear';
+export { default as HomepagePromoBlocks } from './HomepagePromoBlocks';
 export { default as BrandHubSections } from './BrandHubSections';
