@@ -75,11 +75,11 @@ export default function MainNav() {
     if (e.key === 'Escape') setOpenMenu(null)
   }
 
-  const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0
-
   if (!isMounted) {
     return <LegacyNavigation />
   }
+
+  const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0
 
   if (isTouch) {
     return <LegacyNavigation />
