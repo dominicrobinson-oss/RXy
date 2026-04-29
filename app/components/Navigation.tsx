@@ -24,7 +24,7 @@ export default function Navigation() {
             href="#"
             className="text-[34px] leading-none font-black tracking-[0.12em] text-[#0b4b59] whitespace-nowrap"
           >
-            MYPROTEIN
+            RXy+
           </a>
 
           <div className="hidden md:flex items-center gap-3 lg:gap-4">

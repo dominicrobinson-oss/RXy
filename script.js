@@ -56,7 +56,7 @@ function renderSeo(meta){
   const h=document.getElementById('seo-title');
   const p=document.getElementById('seo-text');
   h.textContent=`Shop ${meta.pageTitle} at RXy+`;
-  p.textContent=`Browse our ${meta.pageTitle.toLowerCase()} range inspired by Myprotein-style category navigation. Use filters for flavour, diet and goals, then compare best sellers and latest arrivals.`;
+  p.textContent=`Browse our ${meta.pageTitle.toLowerCase()} range inspired by RXy+-style category navigation. Use filters for flavour, diet and goals, then compare best sellers and latest arrivals.`;
 }
 
 function startCountdown(){
