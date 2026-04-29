@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import LegacyNav from '@/components/legacy/NavigationLegacy'
+import LegacyNavigation from '@/components/legacy/NavigationLegacy'
 import MegaMenuProtein from './MegaMenuProtein'
 import MegaMenuTrending from './MegaMenuTrending'
 import MegaMenuSupplements from './MegaMenuSupplements'
@@ -75,14 +75,14 @@ export default function MainNav() {
     if (e.key === 'Escape') setOpenMenu(null)
   }
 
-  const isTouch = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)
+  const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0
 
   if (!isMounted) {
-    return <LegacyNav />
+    return <LegacyNavigation />
   }
 
   if (isTouch) {
-    return <LegacyNav />
+    return <LegacyNavigation />
   }
 
   return (
