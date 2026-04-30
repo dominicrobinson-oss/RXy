@@ -1,18 +1,19 @@
-import LegacyNav from '@/components/legacy/NavigationLegacy'
+// app/components/Navigation.tsx
 
+import LegacyNav from '@/components/legacy/NavigationLegacy'
 let MainNav: any = null
 
-// Load MainNav only when the mega‑menu feature flag is enabled
+// Load mega menu only when enabled
 if (process.env.NEXT_PUBLIC_ENABLE_MEGA_MENU === 'true') {
   MainNav = require('@/components/navigation/MainNav').default
 }
 
 export default function NavigationWrapper(props: any) {
-  const enabled = process.env.NEXT_PUBLIC_ENABLE_MEGA_MENU === 'true'
-
-  if (enabled && MainNav) {
+  // If flag is ON and MainNav loaded → use mega menu
+  if (process.env.NEXT_PUBLIC_ENABLE_MEGA_MENU === 'true' && MainNav) {
     return <MainNav {...props} />
   }
 
+  // Otherwise → use legacy nav
   return <LegacyNav {...props} />
 }

@@ -1,34 +1,48 @@
 export default function MegaMenuSnacks() {
   return (
-    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-lg animate-slideDown z-50">
-      <div className="mx-auto max-w-7xl px-8 py-6 grid grid-cols-4 gap-8">
+    <div
+      id="megamenu-snacks"
+      className="absolute left-0 top-full w-screen border-t border-gray-200 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.12)] animate-slideDown z-50"
+    >
+      <div className="max-w-7xl mx-auto px-10 py-8 grid grid-cols-4 gap-10">
         <div>
-          <h3 className="text-sm font-semibold">Snacks</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li><a href="#" className="hover:text-black">Protein bars</a></li>
-            <li><a href="#" className="hover:text-black">Cookies</a></li>
+          <h3 className="text-sm font-semibold mb-3">Shop by Category</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href="#">Protein Bars</a></li>
+            <li><a href="#">Protein Cookies</a></li>
+            <li><a href="#">Crisps & Savoury</a></li>
+            <li><a href="#">Breakfast</a></li>
+            <li><a href="#">Vegan Snacks</a></li>
           </ul>
         </div>
+
         <div>
-          <h3 className="text-sm font-semibold">Food</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li><a href="#" className="hover:text-black">Nut butters</a></li>
-            <li><a href="#" className="hover:text-black">Ready meals</a></li>
+          <h3 className="text-sm font-semibold mb-3">Shop by Benefit</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href="#">High Protein</a></li>
+            <li><a href="#">Low Sugar</a></li>
+            <li><a href="#">Vegan</a></li>
+            <li><a href="#">On-the-Go</a></li>
           </ul>
         </div>
+
         <div>
-          <h3 className="text-sm font-semibold">By goal</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li><a href="#" className="hover:text-black">High protein</a></li>
-            <li><a href="#" className="hover:text-black">On the go</a></li>
+          <h3 className="text-sm font-semibold mb-3">Top Ranges</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href="#">Layered Bar</a></li>
+            <li><a href="#">Protein Brownie</a></li>
+            <li><a href="#">Crispy Wafers</a></li>
           </ul>
         </div>
+
         <div>
-          <h3 className="text-sm font-semibold">Shop all</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li><a href="#" className="hover:text-black">All snacks</a></li>
+          <h3 className="text-sm font-semibold mb-3">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href="#">Shop All Snacks</a></li>
+            <li><a href="#">Offers</a></li>
           </ul>
         </div>
+
       </div>
     </div>
   )

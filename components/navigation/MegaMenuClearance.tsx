@@ -1,34 +1,45 @@
 export default function MegaMenuClearance() {
   return (
-    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-lg animate-slideDown z-50">
-      <div className="mx-auto max-w-7xl px-8 py-6 grid grid-cols-4 gap-8">
+    <div
+      id="megamenu-clearance"
+      className="absolute left-0 top-full w-screen border-t border-gray-200 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.12)] animate-slideDown z-50"
+    >
+      <div className="max-w-7xl mx-auto px-10 py-8 grid grid-cols-4 gap-10">
         <div>
-          <h3 className="text-sm font-semibold">Clearance</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li><a href="#" className="hover:text-black">Protein deals</a></li>
-            <li><a href="#" className="hover:text-black">Supplement deals</a></li>
+          <h3 className="text-sm font-semibold mb-3">Clearance Protein</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href="#">Whey Protein</a></li>
+            <li><a href="#">Vegan Protein</a></li>
+            <li><a href="#">Clear Protein</a></li>
           </ul>
         </div>
+
         <div>
-          <h3 className="text-sm font-semibold">Discounts</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li><a href="#" className="hover:text-black">Under £10</a></li>
-            <li><a href="#" className="hover:text-black">Last chance</a></li>
+          <h3 className="text-sm font-semibold mb-3">Clearance Supplements</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href="#">Creatine</a></li>
+            <li><a href="#">Pre-Workout</a></li>
+            <li><a href="#">Vitamins</a></li>
           </ul>
         </div>
+
         <div>
-          <h3 className="text-sm font-semibold">Outlet</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li><a href="#" className="hover:text-black">Bundle savings</a></li>
-            <li><a href="#" className="hover:text-black">Seasonal sale</a></li>
+          <h3 className="text-sm font-semibold mb-3">Clearance Snacks</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href="#">Protein Bars</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Crisps</a></li>
           </ul>
         </div>
+
         <div>
-          <h3 className="text-sm font-semibold">Shop all</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li><a href="#" className="hover:text-black">All clearance</a></li>
+          <h3 className="text-sm font-semibold mb-3">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href="#">Shop All Clearance</a></li>
+            <li><a href="#">Offers</a></li>
           </ul>
         </div>
+
       </div>
     </div>
   )
