@@ -1,7 +1,6 @@
 const categories = [
   'PROTEIN',
   'CREATINE',
-  'ACTIVEWEAR',
   'BARS, FOOD & SNACKS',
   'VITAMINS',
   'PRE-WORKOUT',

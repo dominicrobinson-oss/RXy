@@ -2,7 +2,7 @@
 
 import { Search, User, ShoppingBag } from 'lucide-react';
 
-const primaryTabs = ['Nutrition', 'Clothing', 'Brands'];
+const primaryTabs = ['Nutrition', 'Brands'];
 
 const secondaryTabs = [
   'Trending',

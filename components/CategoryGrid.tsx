@@ -1,7 +1,7 @@
 const categories = [
   { name: "Protein", image: "/images/cat-protein.jpg" },
   { name: "Creatine", image: "/images/cat-creatine.jpg" },
-  { name: "Activewear", image: "/images/cat-activewear.jpg" },
+
   { name: "Snacks", image: "/images/cat-snacks.jpg" },
   { name: "Vitamins", image: "/images/cat-vitamins.jpg" },
   { name: "Pre\u2011Workout", image: "/images/cat-preworkout.jpg" },

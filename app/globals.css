@@ -35,3 +35,21 @@ body {
 .animate-slideDown {
   animation: slideDown 180ms ease-out;
 }
+
+@keyframes drawerSlideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes drawerSlideOut {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.drawer-open {
+  animation: drawerSlideIn 300ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.drawer-closed {
+  animation: drawerSlideOut 300ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}

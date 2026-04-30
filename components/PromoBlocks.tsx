@@ -19,9 +19,9 @@ const promos = [
 
 export default function PromoBlocks() {
   return (
-    <section className="bg-slate-50 py-14 md:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-5 md:grid-cols-2 lg:gap-6">
+    <section className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <div className="grid gap-6 md:grid-cols-2">
           {promos.map((promo) => (
             <div
               key={promo.id}

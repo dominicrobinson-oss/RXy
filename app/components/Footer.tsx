@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#1f1f1f] text-gray-300 mt-14 border-t border-gray-700">
-      <div className="max-w-7xl mx-auto px-4 py-14 sm:px-6 md:py-16 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-[38px] md:gap-[46px] mb-12 md:mb-14">
+    <footer className="py-16 bg-black text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
           <div>
             <h3 className="font-semibold text-white mb-4 text-[12px] uppercase tracking-[0.08em]">Help & Information</h3>
             <ul className="space-y-2 text-[13px]">
@@ -18,7 +18,6 @@ export default function Footer() {
             <h3 className="font-semibold text-white mb-4 text-[12px] uppercase tracking-[0.08em]">Products</h3>
             <ul className="space-y-2 text-[13px]">
               <li><a href="#" className="hover:text-white">Protein</a></li>
-              <li><a href="#" className="hover:text-white">Activewear</a></li>
               <li><a href="#" className="hover:text-white">Bars, drinks & snacks</a></li>
               <li><a href="#" className="hover:text-white">Nutrition</a></li>
               <li><a href="#" className="hover:text-white">Vitamins</a></li>

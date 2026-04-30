@@ -4,7 +4,6 @@ import Navigation from "@/components/Navigation";
 import CategoryStrip from "@/components/CategoryStrip";
 import HeroBanner from "@/components/HeroBanner";
 import BestSellers from "@/components/BestSellers";
-import NewInActivewear from "@/components/NewInActivewear";
 import PromoBlocks from "@/components/PromoBlocks";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
@@ -21,7 +20,6 @@ export default function HomePage() {
       <CategoryStrip />
       <HeroBanner />
       <BestSellers />
-      <NewInActivewear />
       <PromoBlocks />
       <Newsletter />
       <Footer />

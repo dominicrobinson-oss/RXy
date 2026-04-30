@@ -16,7 +16,7 @@ export default function Header() {
               NUTRITION
             </button>
             <button className="px-4 py-2 text-[#0b4b59] text-[14px] font-semibold hover:text-black transition">
-              CLOTHING
+              SUPPLEMENTS
             </button>
             <button className="px-4 py-2 text-[#0b4b59] text-[14px] font-semibold hover:text-black transition">
               BRANDS

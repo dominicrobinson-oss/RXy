@@ -10,7 +10,7 @@ export default function MegaMenuCollabs() {
           <ul className="space-y-2 text-sm">
             <li><a href="#">Clear Whey x Vimto</a></li>
             <li><a href="#">Impact x Grenade</a></li>
-            <li><a href="#">MP Clothing Collabs</a></li>
+            <li><a href="#">MP Performance Collabs</a></li>
           </ul>
         </div>
 

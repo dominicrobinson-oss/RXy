@@ -17,7 +17,7 @@ export default function MegaMenuAccessories() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold mb-3">Clothing Accessories</h3>
+          <h3 className="text-sm font-semibold mb-3">Accessories</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="#">Socks</a></li>
             <li><a href="#">Hats</a></li>

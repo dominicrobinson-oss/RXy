@@ -76,10 +76,10 @@ function Stars({ rating }: { rating: number }) {
 
 export default function BestSellers() {
   return (
-    <section className="bg-slate-50 py-14 md:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-5 flex items-baseline justify-between">
-          <h2 className="text-xl font-semibold uppercase tracking-[0.07em] text-slate-800 md:text-2xl">
+    <section className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-6 flex items-baseline justify-between">
+          <h2 className="text-2xl font-bold uppercase tracking-[0.07em] text-slate-800">
             Best sellers
           </h2>
           <button className="text-xs font-semibold uppercase tracking-wide text-[#0071e3] hover:underline">
@@ -87,7 +87,7 @@ export default function BestSellers() {
           </button>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((p) => (
             <div
               key={p.id}
@@ -112,7 +112,7 @@ export default function BestSellers() {
                 )}
               </div>
 
-              <div className="flex flex-1 flex-col gap-1 p-3.5 text-sm">
+              <div className="p-4 flex flex-1 flex-col gap-2 text-sm">
                 <h3 className="line-clamp-2 text-[13px] font-semibold">
                   {p.name}
                 </h3>

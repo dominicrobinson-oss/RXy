@@ -11,20 +11,16 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="bg-white py-14 md:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl rounded-lg border border-slate-200 bg-slate-50 px-4 py-8 sm:px-8 sm:py-10">
-          <h2 className="text-lg font-medium uppercase tracking-[0.07em] text-slate-800 md:text-xl">
-            Sign up &amp; save
-          </h2>
-          <p className="mt-2 text-sm text-slate-600">
-            Be the first to hear about new products, exclusive offers, and
-            training inspiration.
-          </p>
+    <section className="py-16 bg-[#f5f5f5]">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <h2 className="text-2xl font-bold">Sign up &amp; save</h2>
+        <p className="text-sm text-slate-600">
+          Be the first to hear about new products, exclusive offers, and training inspiration.
+        </p>
 
-          <form
+        <form
             onSubmit={handleSubmit}
-            className="mt-4 flex flex-col gap-3 sm:flex-row"
+            className="flex flex-col gap-3 sm:flex-row"
           >
             <input
               type="email"
@@ -32,21 +28,20 @@ export default function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
-              className="w-full rounded-full border border-slate-300 px-4 py-2 text-sm outline-none focus:border-[#0071e3] focus:ring-1 focus:ring-[#0071e3]"
+              className="w-full rounded-md border border-slate-300 px-4 py-3 text-[16px] outline-none focus:border-[#0071e3] focus:ring-1 focus:ring-[#0071e3]"
             />
             <button
               type="submit"
-              className="w-full rounded-full bg-[#0071e3] px-6 py-2 text-sm font-semibold uppercase tracking-wide text-white hover:bg-[#005bb5] sm:w-auto"
+              className="w-full rounded-md bg-black px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white hover:bg-gray-900 sm:w-auto"
             >
               Join now
             </button>
           </form>
 
-          <p className="mt-2 text-[11px] text-slate-500">
+          <p className="text-[11px] text-slate-500">
             By signing up, you agree to receive marketing emails. You can
             unsubscribe at any time.
           </p>
-        </div>
       </div>
     </section>
   );

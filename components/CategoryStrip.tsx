@@ -1,7 +1,6 @@
 const categories = [
 	"Protein",
 	"Creatine",
-	"Activewear",
 	"Bars, Food & Snacks",
 	"Vitamins",
 	"Pre-Workout",
@@ -9,14 +8,14 @@ const categories = [
 
 export default function CategoryStrip() {
 	return (
-		<section className="w-full bg-white py-[22px]">
-			<div className="mx-auto max-w-7xl overflow-x-auto whitespace-nowrap scroll-smooth no-scrollbar px-4 sm:px-6 lg:px-8 md:overflow-visible">
-				<div className="mx-auto inline-flex w-max min-w-full items-center justify-start gap-3 md:grid md:w-full md:min-w-0 md:grid-cols-6 md:gap-4">
+		<section className="w-full bg-white py-12">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="flex flex-wrap gap-4 justify-center">
 					{categories.map((category) => (
 						<button
 							key={category}
 							type="button"
-							className="mt-px rounded-lg bg-[#005462] px-7 py-[18px] text-lg font-normal uppercase tracking-[0.04em] text-white transition hover:bg-[#064653] md:w-full md:px-4 md:py-[16px] md:text-[17px]"
+							className="px-4 py-3 text-lg font-semibold rounded-full border border-gray-300 hover:border-black transition"
 						>
 							{category}
 						</button>
