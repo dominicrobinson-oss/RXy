@@ -1,6 +1,14 @@
 import { notFound } from 'next/navigation';
 
 const allowedCategories = new Map<string, string>([
+  ['trending', 'Trending'],
+  ['protein', 'Protein'],
+  ['supplements', 'Supplements'],
+  ['vitamins', 'Vitamins'],
+  ['snacks', 'Snacks'],
+  ['accessories', 'Accessories'],
+  ['collabs', 'Collabs'],
+  ['clearance', 'Clearance'],
   ['whey-protein-shake', 'Shakes'],
   ['clear-whey', 'Shakes'],
   ['casein-shake', 'Shakes'],
