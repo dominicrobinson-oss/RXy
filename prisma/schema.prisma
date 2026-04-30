@@ -17,7 +17,7 @@ model Product {
   name        String
   slug        String   @unique
   description String
-  price       Decimal
+  price       Decimal  @db.Decimal(10, 2)
   images      String[]
   category    String
   createdAt   DateTime @default(now())

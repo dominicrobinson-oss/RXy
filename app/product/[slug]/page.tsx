@@ -1,33 +1,25 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import ProductCard from '@/app/components/ProductCard';
-import prisma from '@/lib/db';
-import { decimalToPence } from '@/lib/product';
+import { notFound } from "next/navigation";
+import { db } from "@/lib/db";
+import ProductDisplayCard from "@/app/components/ProductDisplayCard";
 
-type ProductPageProps = {
-  params: Promise<{ slug: string }>;
-};
+type Props = { params: Promise<{ slug: string }> };
 
 export const dynamic = 'force-dynamic';
 
-export default async function ProductPage({
-  params,
-}: ProductPageProps) {
+export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
+  const product = await db.product.findUnique({
+    where: { slug },
+  });
 
-  const product = await prisma.product.findUnique({ where: { slug } });
+  if (!product) return notFound();
 
-  if (!product) {
-    notFound();
-  }
-
-  const related = await prisma.product.findMany({
+  const relatedProducts = await db.product.findMany({
     where: {
       category: product.category,
-      id: { not: product.id },
+      NOT: { id: product.id },
     },
-    orderBy: { createdAt: 'desc' },
+    orderBy: { createdAt: "desc" },
     take: 4,
   });
 
@@ -35,14 +27,25 @@ export default async function ProductPage({
     <main className="py-16">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="aspect-[4/5] bg-gray-100 rounded-lg relative overflow-hidden">
-            <Image
-              src={product.images[0] ?? '/placeholder.png'}
-              alt={product.name}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+          <div className="space-y-4">
+            <div className="aspect-[4/5] bg-gray-100 rounded-lg overflow-hidden">
+              {product.images[0] && (
+                <img
+                  src={product.images[0]}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
+              )}
+            </div>
+            {product.images.slice(1).length > 0 && (
+              <div className="grid grid-cols-4 gap-2">
+                {product.images.slice(1).map((img, i) => (
+                  <div key={i} className="aspect-square bg-gray-100 rounded-md overflow-hidden">
+                    <img src={img} alt={`${product.name} ${i + 2}`} className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="space-y-6">
@@ -57,56 +60,33 @@ export default async function ProductPage({
               {product.description}
             </p>
 
-            <div className="space-y-3">
-              <button className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 bg-black text-white text-sm font-medium tracking-wide hover:bg-gray-900 transition-colors">
-                Add to cart
-              </button>
-              <p className="text-xs text-gray-500">
-                Secure checkout • Fast delivery • Backed by science
-              </p>
-            </div>
-
-            <div className="pt-6 border-t border-gray-200 space-y-3">
-              <h2 className="text-sm font-semibold tracking-tight">
-                Product details
-              </h2>
-              <ul className="text-sm text-gray-700 space-y-1">
-                <li>• Premium ingredients</li>
-                <li>• Transparent dosing</li>
-                <li>• Manufactured to high quality standards</li>
-              </ul>
-            </div>
-
-            <div className="pt-6 border-t border-gray-200">
-              <Link
-                href="/products"
-                className="text-sm font-medium text-gray-900 underline-offset-4 hover:underline"
-              >
-                Back to all products
-              </Link>
-            </div>
+            <button className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 bg-black text-white text-sm font-medium tracking-wide hover:bg-gray-900 transition-colors">
+              Add to cart
+            </button>
           </div>
         </div>
 
-        <section className="mt-16">
-          <h2 className="text-2xl font-semibold tracking-tight mb-6">You may also like</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {related.map((item) => (
-              <Link key={item.id} href={`/product/${item.slug}`}>
-                <ProductCard
-                  product={{
-                    id: item.id,
-                    name: item.name,
-                    description: item.description,
-                    price: decimalToPence(item.price),
-                    image: item.images[0] ?? '/placeholder.png',
-                    category: item.category,
-                  }}
+        {relatedProducts.length > 0 && (
+          <section className="mt-16 space-y-6">
+            <div className="space-y-3">
+              <h2 className="text-3xl font-semibold tracking-tight">You may also like</h2>
+              <p className="text-gray-600 max-w-2xl">
+                More picks from the same category.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {relatedProducts.map((related) => (
+                <ProductDisplayCard
+                  key={related.id}
+                  href={`/product/${related.slug}`}
+                  name={related.name}
+                  price={related.price.toString()}
+                  image={related.images[0]}
                 />
-              </Link>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </main>
   );

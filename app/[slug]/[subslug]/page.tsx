@@ -32,20 +32,22 @@ export default async function SubcategoryPage({
   }
 
   return (
-    <main className="max-w-7xl mx-auto px-4 py-10">
-      <p className="text-sm text-gray-500 mb-2">
-        Category / {titleFromSlug(slug)} / {titleFromSlug(subslug)}
-      </p>
-      <h1 className="text-3xl font-bold mb-3">{titleFromSlug(subslug)}</h1>
-      <p className="text-gray-600 mb-8">
-        This subcategory page is ready. Next step: connect real product data and filtering.
-      </p>
-
-      <div className="rounded-xl border border-dashed border-gray-300 p-8 bg-gray-50">
-        <p className="font-medium">Coming soon</p>
-        <p className="text-sm text-gray-600 mt-1">
-          We can now add product cards, sorting, filters, and pagination for this subcategory.
+    <main className="py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <p className="text-sm text-gray-500 mb-2">
+          Category / {titleFromSlug(slug)} / {titleFromSlug(subslug)}
         </p>
+        <h1 className="text-3xl font-semibold tracking-tight mb-3">{titleFromSlug(subslug)}</h1>
+        <p className="text-gray-600 max-w-2xl mb-8">
+          This subcategory page is ready. Next step: connect real product data and filtering.
+        </p>
+
+        <div className="rounded-xl border border-dashed border-gray-300 p-8 bg-gray-50">
+          <p className="font-medium">Coming soon</p>
+          <p className="text-sm text-gray-600 mt-1">
+            We can now add product cards, sorting, filters, and pagination for this subcategory.
+          </p>
+        </div>
       </div>
     </main>
   );

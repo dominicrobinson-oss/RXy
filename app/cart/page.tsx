@@ -14,10 +14,10 @@ export default function CartPage() {
 
   return (
     <main className="py-16">
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="space-y-4">
           <h1 className="text-3xl font-semibold tracking-tight">Cart</h1>
-          <p className="text-gray-600">
+          <p className="text-gray-600 max-w-2xl">
             Review your items before proceeding to checkout.
           </p>
         </div>

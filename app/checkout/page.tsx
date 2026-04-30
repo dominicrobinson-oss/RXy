@@ -1,7 +1,7 @@
 export default function CheckoutPage() {
   return (
     <main className="py-16">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="space-y-4">
           <h1 className="text-3xl font-semibold tracking-tight">Checkout</h1>
           <p className="text-gray-600 max-w-2xl">

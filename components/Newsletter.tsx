@@ -12,13 +12,14 @@ export default function Newsletter() {
 
   return (
     <section className="py-16 bg-[#f5f5f5]">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <h2 className="text-2xl font-bold">Sign up &amp; save</h2>
-        <p className="text-sm text-slate-600">
-          Be the first to hear about new products, exclusive offers, and training inspiration.
-        </p>
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-2xl mx-auto text-center space-y-6">
+          <h2 className="text-3xl font-semibold tracking-tight">Sign up &amp; save</h2>
+          <p className="text-gray-600 max-w-2xl">
+            Be the first to hear about new products, exclusive offers, and training inspiration.
+          </p>
 
-        <form
+          <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-3 sm:flex-row"
           >
@@ -42,6 +43,7 @@ export default function Newsletter() {
             By signing up, you agree to receive marketing emails. You can
             unsubscribe at any time.
           </p>
+        </div>
       </div>
     </section>
   );

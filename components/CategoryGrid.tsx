@@ -16,7 +16,7 @@ export default function CategoryGrid() {
         <h2 className="mb-4 text-xl font-bold uppercase tracking-wider">
           Shop by category
         </h2>
-        <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((cat) => (
             <button
               key={cat.name}

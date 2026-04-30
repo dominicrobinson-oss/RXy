@@ -1,32 +1,19 @@
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import ProductCard from '@/app/components/ProductCard';
-import prisma from '@/lib/db';
-import { decimalToPence } from '@/lib/product';
+import Link from "next/link";
+import { db } from "@/lib/db";
+import ProductDisplayCard from "@/app/components/ProductDisplayCard";
+import CategoryStrip from "@/components/CategoryStrip";
 
-type CategoryPageProps = {
-  params: Promise<{ category: string }>;
-};
+type Props = { params: Promise<{ category: string }> };
 
 export const dynamic = 'force-dynamic';
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
+export default async function CategoryPage({ params }: Props) {
   const { category: rawCategory } = await params;
   const category = decodeURIComponent(rawCategory);
-
-  const products = await prisma.product.findMany({
-    where: {
-      category: {
-        equals: category,
-        mode: 'insensitive',
-      },
-    },
-    orderBy: { createdAt: 'desc' },
+  const products = await db.product.findMany({
+    where: { category },
+    orderBy: { createdAt: "desc" },
   });
-
-  if (products.length === 0) {
-    notFound();
-  }
 
   return (
     <main className="py-16">
@@ -40,33 +27,18 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </p>
         </div>
 
+        <CategoryStrip />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
           {products.map((product) => (
-            <Link
+            <ProductDisplayCard
               key={product.id}
               href={`/product/${product.slug}`}
-            >
-              <ProductCard
-                product={{
-                  id: product.id,
-                  name: product.name,
-                  description: product.description,
-                  price: decimalToPence(product.price),
-                  image: product.images[0] ?? '/placeholder.png',
-                  category: product.category,
-                }}
-              />
-            </Link>
+              name={product.name}
+              price={product.price.toString()}
+              image={product.images[0]}
+            />
           ))}
-        </div>
-
-        <div className="mt-8">
-          <Link
-            href="/products"
-            className="text-sm font-medium text-gray-900 underline-offset-4 hover:underline"
-          >
-            View all products
-          </Link>
         </div>
       </div>
     </main>

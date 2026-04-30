@@ -1,47 +1,53 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { updateSession } from '@/lib/supabase/middleware'
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+import { createServerClient } from "@supabase/auth-helpers-nextjs";
 
-const BLOCKED_PATHS = ['/clothing', '/activewear']
+export async function middleware(req: NextRequest) {
+  let res = NextResponse.next();
 
-export async function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl
-
-  // Block removed category paths
-  const isBlocked = BLOCKED_PATHS.some(
-    (blocked) => pathname === blocked || pathname.startsWith(blocked + '/')
-  )
-  if (isBlocked) {
-    return NextResponse.redirect(new URL('/', request.url), { status: 302 })
-  }
-
-  // Protect /admin/** routes (but not /admin/login itself)
-  if (pathname.startsWith('/admin') && pathname !== '/admin/login') {
-    const { supabaseResponse, user } = await updateSession(request)
-
-    if (!user) {
-      const loginUrl = new URL('/admin/login', request.url)
-      loginUrl.searchParams.set('redirectTo', pathname)
-      return NextResponse.redirect(loginUrl, { status: 302 })
+  // Create a Supabase client using middleware-compatible cookie handlers
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return req.cookies.getAll();
+        },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value }) => req.cookies.set(name, value));
+          res = NextResponse.next({ request: req });
+          cookiesToSet.forEach(({ name, value, options }) =>
+            res.cookies.set(name, value, options)
+          );
+        },
+      },
     }
+  );
 
-    return supabaseResponse
+  // Refresh session if needed
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+
+  const isAdminRoute = req.nextUrl.pathname.startsWith("/admin");
+
+  // Allow access to login page even if not authenticated
+  if (req.nextUrl.pathname === "/admin/login") {
+    return res;
   }
 
-  // For all other routes, still refresh the Supabase session so cookies stay fresh
-  if (pathname.startsWith('/admin/login')) {
-    const { supabaseResponse } = await updateSession(request)
-    return supabaseResponse
+  // Protect all other /admin routes
+  if (isAdminRoute && !session) {
+    const redirectUrl = req.nextUrl.clone();
+    redirectUrl.pathname = "/admin/login";
+    redirectUrl.searchParams.set("redirectedFrom", req.nextUrl.pathname);
+    return NextResponse.redirect(redirectUrl);
   }
 
-  return NextResponse.next()
+  return res;
 }
 
 export const config = {
-  matcher: [
-    '/clothing',
-    '/clothing/:path*',
-    '/activewear',
-    '/activewear/:path*',
-    '/admin/:path*',
-  ],
-}
+  matcher: ["/admin/:path*"],
+};

@@ -15,17 +15,17 @@ export default function HeroBanner() {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div className="relative max-w-6xl mx-auto px-4 space-y-6">
         <div className="max-w-xl">
           <p className="mb-2 text-xs font-semibold tracking-[0.2em] text-[#00d4ff]">
             PAYDAY SALE
           </p>
-          <h1 className="-mt-[2px] text-3xl font-bold uppercase leading-[1.1] tracking-[0.03em] sm:text-4xl lg:text-5xl">
+          <h1 className="text-3xl font-semibold tracking-tight">
             Up to <span className="text-[#00d4ff]">70% off</span>
             <br />
             + extra 20% off
           </h1>
-          <p className="mt-4 text-sm sm:text-base text-slate-100">
+          <p className="mt-4 text-gray-600 max-w-2xl">
             Summer essential supplements, limited time only. Use code{" "}
             <span className="font-semibold">PAYDAY</span> at checkout.
           </p>

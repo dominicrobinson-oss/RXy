@@ -1,7 +1,7 @@
 export default function PromoBanner() {
   return (
     <section className="bg-[#0b4b59] text-white border-b border-[#06323c]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-11 flex items-center justify-between gap-3 text-[11px] md:text-xs font-semibold uppercase tracking-[0.06em]">
+      <div className="max-w-6xl mx-auto px-4 h-11 flex items-center justify-between gap-3 text-[11px] md:text-xs font-semibold uppercase tracking-[0.06em]">
         <p className="truncate text-white/95">
           UP TO 70% OFF PAYDAY SALE + EXTRA 15% OFF VIA APP | USE CODE "APPY"
         </p>

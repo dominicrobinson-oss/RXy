@@ -10,7 +10,7 @@ export default function CategoryGrid() {
   return (
     <section className="py-5 md:py-6">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5 md:gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((cat) => (
             <a
               key={cat}

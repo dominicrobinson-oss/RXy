@@ -77,23 +77,21 @@ function Stars({ rating }: { rating: number }) {
 export default function BestSellers() {
   return (
     <section className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-6 flex items-baseline justify-between">
-          <h2 className="text-2xl font-bold uppercase tracking-[0.07em] text-slate-800">
-            Best sellers
-          </h2>
-          <button className="text-xs font-semibold uppercase tracking-wide text-[#0071e3] hover:underline">
-            View all
-          </button>
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="mb-6 space-y-3">
+          <h2 className="text-3xl font-semibold tracking-tight">Best sellers</h2>
+          <p className="text-gray-600 max-w-2xl">
+            Discover customer favourites trusted for performance and results.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((p) => (
             <div
               key={p.id}
-              className="flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              className="bg-white rounded-lg shadow-sm p-4 flex flex-col hover:shadow-md transition-shadow"
             >
-              <div className="relative aspect-[4/5] bg-slate-100">
+              <div className="relative aspect-[4/5] bg-slate-100 rounded-md mb-4 overflow-hidden">
                 <Image
                   src={p.image}
                   alt={p.name}
@@ -112,8 +110,8 @@ export default function BestSellers() {
                 )}
               </div>
 
-              <div className="p-4 flex flex-1 flex-col gap-2 text-sm">
-                <h3 className="line-clamp-2 text-[13px] font-semibold">
+              <div className="flex flex-1 flex-col gap-2 text-sm">
+                <h3 className="line-clamp-2 text-sm font-medium">
                   {p.name}
                 </h3>
                 <p className="line-clamp-2 text-[11px] text-slate-600">
@@ -128,7 +126,7 @@ export default function BestSellers() {
                 </div>
 
                 <div className="mt-2 flex items-baseline gap-2">
-                  <span className="text-sm font-bold">{p.price}</span>
+                  <span className="text-base font-semibold">{p.price}</span>
                   {p.oldPrice && (
                     <span className="text-xs text-slate-400 line-through">
                       {p.oldPrice}

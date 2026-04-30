@@ -1,27 +1,35 @@
+import { Dumbbell, FlaskConical, Shirt, Sandwich, Pill, Zap } from "lucide-react";
+
 const categories = [
-	"Protein",
-	"Creatine",
-	"Bars, Food & Snacks",
-	"Vitamins",
-	"Pre-Workout",
+  { label: "Protein", icon: Dumbbell },
+  { label: "Creatine", icon: FlaskConical },
+  { label: "Activewear", icon: Shirt },
+  { label: "Snacks", icon: Sandwich },
+  { label: "Vitamins", icon: Pill },
+  { label: "Pre-Workout", icon: Zap },
 ];
 
 export default function CategoryStrip() {
-	return (
-		<section className="w-full bg-white py-12">
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex flex-wrap gap-4 justify-center">
-					{categories.map((category) => (
-						<button
-							key={category}
-							type="button"
-							className="px-4 py-3 text-lg font-semibold rounded-full border border-gray-300 hover:border-black transition"
-						>
-							{category}
-						</button>
-					))}
-				</div>
-			</div>
-		</section>
-	);
+  return (
+    <section className="w-full bg-white py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
+          {categories.map((category) => {
+            const Icon = category.icon;
+
+            return (
+              <button
+                key={category.label}
+                type="button"
+                className="inline-flex items-center gap-2 rounded-md bg-[#003f4c] px-4 py-3 text-white text-sm font-medium whitespace-nowrap min-w-[150px] shadow-sm hover:bg-[#0a5462] transition"
+              >
+                <Icon size={16} className="shrink-0" />
+                <span>{category.label}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -1,41 +1,23 @@
-import { notFound } from 'next/navigation';
-import prisma from '@/lib/db';
-import ProductForm from '../../ProductForm';
+import { db } from "@/lib/db";
+import EditProductForm from "./EditProductForm";
 
-type Params = {
-  params: Promise<{ id: string }>;
-};
+type Props = { params: Promise<{ id: string }> };
 
-export const dynamic = 'force-dynamic';
-
-export default async function EditAdminProductPage({ params }: Params) {
+export default async function EditProductPage({ params }: Props) {
   const { id } = await params;
-
-  const product = await prisma.product.findUnique({
-    where: { id },
-  });
-
-  if (!product) {
-    notFound();
-  }
+  const product = await db.product.findUnique({ where: { id } });
+  if (!product) return null;
 
   return (
     <main className="py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-3xl font-semibold tracking-tight mb-2">Edit Product</h1>
-        <p className="text-gray-600 mb-8">Update product details.</p>
-        <ProductForm
-          mode="edit"
-          productId={product.id}
-          initialValues={{
-            name: product.name,
-            slug: product.slug,
-            description: product.description,
-            price: Number(product.price).toString(),
-            category: product.category,
-            images: product.images,
-          }}
-        />
+        <div className="max-w-2xl space-y-6">
+          <div className="space-y-3">
+            <h1 className="text-3xl font-semibold tracking-tight">Edit product</h1>
+            <p className="text-gray-600 max-w-2xl">Update product details and media from one place.</p>
+          </div>
+          <EditProductForm product={product} />
+        </div>
       </div>
     </main>
   );
