@@ -1,8 +1,9 @@
 'use client'
+
 import React, { useEffect, useRef, useState } from 'react'
-import LegacyNavigation from '@/components/legacy/NavigationLegacy'
-import MegaMenuProtein from './MegaMenuProtein'
+import LegacyNav from '@/components/legacy/NavigationLegacy'
 import MegaMenuTrending from './MegaMenuTrending'
+import MegaMenuProtein from './MegaMenuProtein'
 import MegaMenuSupplements from './MegaMenuSupplements'
 import MegaMenuVitamins from './MegaMenuVitamins'
 import MegaMenuSnacks from './MegaMenuSnacks'
@@ -76,13 +77,13 @@ export default function MainNav() {
   }
 
   if (!isMounted) {
-    return <LegacyNavigation />
+    return <LegacyNav />
   }
 
   const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0
 
   if (isTouch) {
-    return <LegacyNavigation />
+    return <LegacyNav />
   }
 
   return (
@@ -100,11 +101,15 @@ export default function MainNav() {
             onFocus={() => openWithDelay('protein')}
             onBlur={() => closeWithDelay()}
             onKeyDown={(e) => handleButtonKeyDown(e, 'protein')}
+            onMouseEnter={() => openWithDelay('protein')}
+            onClick={(e) => {
+              e.preventDefault()
+              setOpenMenu(openMenu === 'protein' ? null : 'protein')
+            }}
             className="px-3 py-2 text-sm font-medium hover:text-black focus:outline-none"
           >
             Protein
           </button>
-
           {openMenu === 'protein' && (
             <div id="megamenu-protein" role="region" aria-label="Protein menu">
               <MegaMenuProtein />
@@ -123,11 +128,15 @@ export default function MainNav() {
             onFocus={() => openWithDelay('trending')}
             onBlur={() => closeWithDelay()}
             onKeyDown={(e) => handleButtonKeyDown(e, 'trending')}
+            onMouseEnter={() => openWithDelay('trending')}
+            onClick={(e) => {
+              e.preventDefault()
+              setOpenMenu(openMenu === 'trending' ? null : 'trending')
+            }}
             className="px-3 py-2 text-sm font-medium hover:text-black focus:outline-none"
           >
             Trending
           </button>
-
           {openMenu === 'trending' && (
             <div id="megamenu-trending" role="region" aria-label="Trending menu">
               <MegaMenuTrending />
@@ -146,11 +155,15 @@ export default function MainNav() {
             onFocus={() => openWithDelay('supplements')}
             onBlur={() => closeWithDelay()}
             onKeyDown={(e) => handleButtonKeyDown(e, 'supplements')}
+            onMouseEnter={() => openWithDelay('supplements')}
+            onClick={(e) => {
+              e.preventDefault()
+              setOpenMenu(openMenu === 'supplements' ? null : 'supplements')
+            }}
             className="px-3 py-2 text-sm font-medium hover:text-black focus:outline-none"
           >
             Supplements
           </button>
-
           {openMenu === 'supplements' && (
             <div id="megamenu-supplements" role="region" aria-label="Supplements menu">
               <MegaMenuSupplements />
@@ -169,11 +182,15 @@ export default function MainNav() {
             onFocus={() => openWithDelay('vitamins')}
             onBlur={() => closeWithDelay()}
             onKeyDown={(e) => handleButtonKeyDown(e, 'vitamins')}
+            onMouseEnter={() => openWithDelay('vitamins')}
+            onClick={(e) => {
+              e.preventDefault()
+              setOpenMenu(openMenu === 'vitamins' ? null : 'vitamins')
+            }}
             className="px-3 py-2 text-sm font-medium hover:text-black focus:outline-none"
           >
             Vitamins
           </button>
-
           {openMenu === 'vitamins' && (
             <div id="megamenu-vitamins" role="region" aria-label="Vitamins menu">
               <MegaMenuVitamins />
@@ -192,11 +209,15 @@ export default function MainNav() {
             onFocus={() => openWithDelay('snacks')}
             onBlur={() => closeWithDelay()}
             onKeyDown={(e) => handleButtonKeyDown(e, 'snacks')}
+            onMouseEnter={() => openWithDelay('snacks')}
+            onClick={(e) => {
+              e.preventDefault()
+              setOpenMenu(openMenu === 'snacks' ? null : 'snacks')
+            }}
             className="px-3 py-2 text-sm font-medium hover:text-black focus:outline-none"
           >
-            Snacks
+            Bars, Snacks & Foods
           </button>
-
           {openMenu === 'snacks' && (
             <div id="megamenu-snacks" role="region" aria-label="Snacks menu">
               <MegaMenuSnacks />
@@ -215,11 +236,15 @@ export default function MainNav() {
             onFocus={() => openWithDelay('accessories')}
             onBlur={() => closeWithDelay()}
             onKeyDown={(e) => handleButtonKeyDown(e, 'accessories')}
+            onMouseEnter={() => openWithDelay('accessories')}
+            onClick={(e) => {
+              e.preventDefault()
+              setOpenMenu(openMenu === 'accessories' ? null : 'accessories')
+            }}
             className="px-3 py-2 text-sm font-medium hover:text-black focus:outline-none"
           >
             Accessories
           </button>
-
           {openMenu === 'accessories' && (
             <div id="megamenu-accessories" role="region" aria-label="Accessories menu">
               <MegaMenuAccessories />
@@ -238,11 +263,15 @@ export default function MainNav() {
             onFocus={() => openWithDelay('collabs')}
             onBlur={() => closeWithDelay()}
             onKeyDown={(e) => handleButtonKeyDown(e, 'collabs')}
+            onMouseEnter={() => openWithDelay('collabs')}
+            onClick={(e) => {
+              e.preventDefault()
+              setOpenMenu(openMenu === 'collabs' ? null : 'collabs')
+            }}
             className="px-3 py-2 text-sm font-medium hover:text-black focus:outline-none"
           >
             Collabs
           </button>
-
           {openMenu === 'collabs' && (
             <div id="megamenu-collabs" role="region" aria-label="Collabs menu">
               <MegaMenuCollabs />
@@ -261,11 +290,15 @@ export default function MainNav() {
             onFocus={() => openWithDelay('clearance')}
             onBlur={() => closeWithDelay()}
             onKeyDown={(e) => handleButtonKeyDown(e, 'clearance')}
+            onMouseEnter={() => openWithDelay('clearance')}
+            onClick={(e) => {
+              e.preventDefault()
+              setOpenMenu(openMenu === 'clearance' ? null : 'clearance')
+            }}
             className="px-3 py-2 text-sm font-medium hover:text-black focus:outline-none"
           >
             Clearance
           </button>
-
           {openMenu === 'clearance' && (
             <div id="megamenu-clearance" role="region" aria-label="Clearance menu">
               <MegaMenuClearance />
