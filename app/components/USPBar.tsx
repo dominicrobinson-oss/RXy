@@ -13,7 +13,7 @@ export default function USPBar() {
   return (
     <section className="bg-gray-100 py-2 border-y border-gray-200">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {usp.map((item, idx) => {
             const Icon = item.icon;
             return (

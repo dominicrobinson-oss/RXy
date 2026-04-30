@@ -40,7 +40,7 @@ export default function NewInActivewear() {
           <a href="#" className="text-sm font-semibold text-[#0b4b59] hover:underline">View all</a>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item) => (
             <article key={item.name} className="border border-gray-200 rounded-md overflow-hidden bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)] transition h-full flex flex-col">
               <div className="relative h-52 md:h-64 bg-gray-100">

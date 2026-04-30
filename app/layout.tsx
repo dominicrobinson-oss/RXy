@@ -3,9 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { MobileNavEffects } from "@/hooks/useMobileNav";
+import Header from "@/app/components/Header";
 import MainNav from "@/components/navigation/MainNav";
 import MobileNav from "@/components/navigation/MobileNav";
 import MobileDrawer from "@/components/navigation/MobileDrawer";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -43,6 +45,11 @@ export default function RootLayout({
           <MobileNav />
         </div>
 
+        {/* Desktop header: logo, search, account, basket (visible ≥ lg) */}
+        <div className="hidden lg:block">
+          <Header />
+        </div>
+
         {/* Desktop navigation (visible ≥ lg) */}
         <div className="hidden lg:flex">
           <MainNav />
@@ -55,6 +62,8 @@ export default function RootLayout({
         <main className="pt-16 lg:pt-0">
           {children}
         </main>
+
+        <Footer />
 
         <Analytics />
         <SpeedInsights />

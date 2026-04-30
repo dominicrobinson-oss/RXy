@@ -10,13 +10,13 @@ export default function CheckoutPage() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-[2fr,1fr] gap-10">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <section className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-sm font-semibold tracking-tight">
                 Shipping details
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <input
                   className="border border-gray-300 rounded-md px-3 py-2 text-sm"
                   placeholder="First name"
@@ -44,7 +44,7 @@ export default function CheckoutPage() {
               <h2 className="text-sm font-semibold tracking-tight">
                 Payment details
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <input
                   className="border border-gray-300 rounded-md px-3 py-2 text-sm sm:col-span-2"
                   placeholder="Card number"

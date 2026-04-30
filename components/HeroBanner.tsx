@@ -36,7 +36,7 @@ export default function HeroBanner() {
             </button>
             <div className="flex items-center gap-2 rounded-full bg-black/40 px-4 py-2 text-xs font-medium">
               <span className="h-2 w-2 rounded-full bg-red-500" />
-              <span>Offer ends in 02:14:36</span>
+              <span>Ends soon</span>
             </div>
           </div>
         </div>

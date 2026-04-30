@@ -1,12 +1,13 @@
 import { Dumbbell, FlaskConical, Shirt, Sandwich, Pill, Zap } from "lucide-react";
+import Link from "next/link";
 
 const categories = [
-  { label: "Protein", icon: Dumbbell },
-  { label: "Creatine", icon: FlaskConical },
-  { label: "Activewear", icon: Shirt },
-  { label: "Snacks", icon: Sandwich },
-  { label: "Vitamins", icon: Pill },
-  { label: "Pre-Workout", icon: Zap },
+  { label: "Protein", icon: Dumbbell, href: "/categories/protein" },
+  { label: "Creatine", icon: FlaskConical, href: "/categories/creatine" },
+  { label: "Activewear", icon: Shirt, href: "/categories/activewear" },
+  { label: "Snacks", icon: Sandwich, href: "/categories/snacks" },
+  { label: "Vitamins", icon: Pill, href: "/categories/vitamins" },
+  { label: "Pre-Workout", icon: Zap, href: "/categories/pre-workout" },
 ];
 
 export default function CategoryStrip() {
@@ -18,14 +19,14 @@ export default function CategoryStrip() {
             const Icon = category.icon;
 
             return (
-              <button
+              <Link
                 key={category.label}
-                type="button"
+                href={category.href}
                 className="inline-flex items-center gap-2 rounded-md bg-[#003f4c] px-4 py-3 text-white text-sm font-medium whitespace-nowrap min-w-[150px] shadow-sm hover:bg-[#0a5462] transition"
               >
                 <Icon size={16} className="shrink-0" />
                 <span>{category.label}</span>
-              </button>
+              </Link>
             );
           })}
         </div>

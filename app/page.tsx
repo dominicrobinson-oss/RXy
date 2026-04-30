@@ -5,7 +5,6 @@ import HeroBanner from "@/components/HeroBanner";
 import BestSellers from "@/components/BestSellers";
 import PromoBlocks from "@/components/PromoBlocks";
 import Newsletter from "@/components/Newsletter";
-import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -18,7 +17,6 @@ export default function HomePage() {
       <BestSellers />
       <PromoBlocks />
       <Newsletter />
-      <Footer />
     </div>
   );
 }

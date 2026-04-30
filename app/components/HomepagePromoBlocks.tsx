@@ -28,7 +28,7 @@ export default function HomepagePromoBlocks() {
   return (
     <section className="py-12 md:py-14 bg-[#f7f8fa] border-y border-gray-200">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {promoBlocks.map((block) => (
             <article
               key={block.title}
