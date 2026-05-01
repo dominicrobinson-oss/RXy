@@ -58,7 +58,7 @@ export default function NewInActivewear() {
               key={item.id}
               className="flex flex-col overflow-hidden rounded-lg bg-slate-50 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="relative aspect-[4/5] bg-slate-200">
+              <div className="relative aspect-[3/2] bg-slate-200">
                 <Image
                   src={item.image}
                   alt={item.name}

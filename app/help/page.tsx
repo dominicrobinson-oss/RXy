@@ -4,7 +4,7 @@ export default function HelpPage() {
       <div className="max-w-screen-xl mx-auto px-4 py-10 md:py-14 lg:py-20 grid grid-cols-1 md:grid-cols-[16rem_1fr] gap-10">
         <h1 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight pt-10 pb-6 md:col-span-2">Help & Information</h1>
 
-        <aside className="hidden md:block w-64 bg-white shadow-sm rounded-lg p-6 space-y-6 text-sm font-medium">
+        <aside className="hidden md:block md:w-full bg-white shadow-sm rounded-lg p-6 space-y-6 text-sm font-medium">
           <nav aria-label="Help navigation">
 
             <div className="space-y-2">

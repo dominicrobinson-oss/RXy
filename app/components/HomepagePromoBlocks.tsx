@@ -27,14 +27,14 @@ const promoBlocks = [
 export default function HomepagePromoBlocks() {
   return (
     <section className="py-12 md:py-14 bg-[#f7f8fa] border-y border-gray-200">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-screen-xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {promoBlocks.map((block) => (
             <article
               key={block.title}
               className="bg-white rounded-md overflow-hidden border border-gray-200 shadow-[0_10px_26px_rgba(0,0,0,0.06)]"
             >
-              <div className="relative h-44 md:h-48">
+              <div className="relative aspect-[3/2]">
                 <Image
                   src={block.image}
                   alt={block.title}

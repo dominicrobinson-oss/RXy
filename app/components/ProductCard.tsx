@@ -8,9 +8,9 @@ export default function ProductCard({ product }: { product: Product }) {
   const save = product.oldPrice ? (product.oldPrice - product.price) / 100 : null;
 
   return (
-    <div className="border border-gray-200 rounded-md overflow-hidden hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)] transition bg-white h-full flex flex-col min-h-[430px]">
+    <div className="border border-gray-200 rounded-md overflow-hidden hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)] transition bg-white h-full flex flex-col">
       {/* Image Container */}
-      <div className="relative bg-gray-100 h-44 overflow-hidden">
+      <div className="relative bg-gray-100 aspect-[3/2] overflow-hidden">
         <Image
           src={product.image}
           alt={product.name}
@@ -43,7 +43,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
       <div className="p-4 flex flex-col flex-1">
         <p className="text-[11px] text-gray-500 uppercase tracking-wide">{product.category}</p>
-        <h3 className="font-semibold text-[15px] text-gray-900 mt-1 line-clamp-2 min-h-[44px]">{product.name}</h3>
+        <h3 className="font-semibold text-[15px] text-gray-900 mt-1 line-clamp-2">{product.name}</h3>
 
         {product.reviews && product.rating && (
           <p className="text-xs text-gray-500 mt-1">
@@ -51,7 +51,7 @@ export default function ProductCard({ product }: { product: Product }) {
           </p>
         )}
 
-        <div className="mt-2 space-y-1 min-h-[64px]">
+        <div className="mt-2 space-y-1">
           <p className="text-xl font-extrabold text-[#005ca8]">£{(product.price / 100).toFixed(2)}</p>
           {product.oldPrice && (
             <p className="text-xs text-gray-500">

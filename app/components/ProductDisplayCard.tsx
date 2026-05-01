@@ -18,7 +18,7 @@ export default function ProductDisplayCard({
 }: ProductDisplayCardProps) {
   const content = (
     <>
-      <div className="aspect-square bg-gray-100 rounded-md mb-4 overflow-hidden">
+      <div className="aspect-[3/2] bg-gray-100 rounded-md mb-4 overflow-hidden">
         {image && (
           <img
             src={image}

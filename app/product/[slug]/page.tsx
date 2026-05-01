@@ -28,7 +28,7 @@ export default async function ProductPage({ params }: Props) {
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="space-y-4">
-            <div className="aspect-[4/5] bg-gray-100 rounded-lg overflow-hidden">
+            <div className="aspect-[3/2] bg-gray-100 rounded-lg overflow-hidden">
               {product.images[0] && (
                 <img
                   src={product.images[0]}
@@ -40,7 +40,7 @@ export default async function ProductPage({ params }: Props) {
             {product.images.slice(1).length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {product.images.slice(1).map((img, i) => (
-                  <div key={i} className="aspect-square bg-gray-100 rounded-md overflow-hidden">
+                  <div key={i} className="aspect-[3/2] bg-gray-100 rounded-md overflow-hidden">
                     <img src={img} alt={`${product.name} ${i + 2}`} className="w-full h-full object-cover" />
                   </div>
                 ))}

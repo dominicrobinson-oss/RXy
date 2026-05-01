@@ -20,12 +20,12 @@ export default function NavigationWrapper(props: any) {
   return (
     <>
       {/* Desktop nav — mega-menu or legacy, visible lg+ */}
-      <div className="hidden lg:flex">
+      <div className="hidden md:flex">
         <DesktopNav {...props} />
       </div>
 
       {/* Mobile top bar — visible below lg */}
-      <div className="flex lg:hidden">
+      <div className="flex md:hidden">
         <MobileNav />
       </div>
 

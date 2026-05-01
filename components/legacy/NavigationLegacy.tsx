@@ -18,8 +18,8 @@ const secondaryTabs = [
 export default function NavigationLegacy() {
   return (
     <nav className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4 border-b border-gray-200">
-        <div className="flex items-center gap-6 lg:gap-8 min-w-0">
+      <div className="max-w-screen-xl mx-auto px-4 py-5 flex flex-wrap items-center justify-between gap-4 border-b border-gray-200">
+        <div className="flex flex-wrap items-center gap-6 lg:gap-8 min-w-0">
           <a
             href="#"
             className="text-[34px] leading-none font-black tracking-[0.12em] text-[#0b4b59] whitespace-nowrap"
@@ -62,7 +62,7 @@ export default function NavigationLegacy() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center gap-6 overflow-x-auto no-scrollbar border-b border-[#e85d2a]">
+      <div className="max-w-screen-xl mx-auto px-4 py-4 flex flex-wrap items-center gap-6 overflow-x-auto no-scrollbar border-b border-[#e85d2a]">
         {secondaryTabs.map((tab) => (
           <a
             key={tab}

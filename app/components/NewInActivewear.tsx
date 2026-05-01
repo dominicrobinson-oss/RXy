@@ -33,9 +33,9 @@ const items = [
 
 export default function NewInActivewear() {
   return (
-    <section className="py-10 md:py-12">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between mb-4">
+    <section className="py-10 md:py-14 lg:py-20">
+      <div className="max-w-screen-xl mx-auto px-4">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">New In Activewear</h2>
           <a href="#" className="text-sm font-semibold text-[#0b4b59] hover:underline">View all</a>
         </div>
@@ -43,7 +43,7 @@ export default function NewInActivewear() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item) => (
             <article key={item.name} className="border border-gray-200 rounded-md overflow-hidden bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)] transition h-full flex flex-col">
-              <div className="relative h-52 md:h-64 bg-gray-100">
+              <div className="relative aspect-[3/2] bg-gray-100">
                 <Image
                   src={item.image}
                   alt={item.name}
@@ -59,7 +59,7 @@ export default function NewInActivewear() {
                 </span>
               </div>
               <div className="p-3 flex flex-col flex-1">
-                <h3 className="text-sm font-semibold text-gray-900 line-clamp-2 min-h-[38px]">{item.name}</h3>
+                <h3 className="text-sm font-semibold text-gray-900 line-clamp-2">{item.name}</h3>
                 <p className="text-sm font-bold text-[#0066b3] mt-1">{item.price}</p>
                 <button className="mt-auto pt-2 w-full bg-[#003f4c] text-white py-2.5 text-xs font-bold rounded hover:bg-[#0a5462] transition">
                   QUICK BUY

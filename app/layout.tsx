@@ -41,17 +41,17 @@ export default function RootLayout({
         <MobileNavEffects />
 
         {/* Mobile navigation (visible < lg) */}
-        <div className="flex lg:hidden">
+        <div className="flex md:hidden">
           <MobileNav />
         </div>
 
         {/* Desktop header: logo, search, account, basket (visible ≥ lg) */}
-        <div className="hidden lg:block">
+        <div className="hidden md:block">
           <Header />
         </div>
 
         {/* Desktop navigation (visible ≥ lg) */}
-        <div className="hidden lg:flex">
+        <div className="hidden md:flex">
           <MainNav />
         </div>
 
@@ -59,7 +59,7 @@ export default function RootLayout({
         <MobileDrawer />
 
         {/* Page content */}
-        <main className="pt-16 lg:pt-0">
+        <main className="pt-16 md:pt-0">
           {children}
         </main>
 

@@ -35,7 +35,7 @@ export default function MyproteinCategoryPage({
               key={`${heading}-${product.name}`}
               className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm"
             >
-              <div className="aspect-square w-full overflow-hidden rounded-md bg-gray-100">
+              <div className="aspect-[3/2] w-full overflow-hidden rounded-md bg-gray-100">
                 <div className="flex h-full w-full items-center justify-center text-xs font-semibold uppercase tracking-wide text-gray-400">
                   Placeholder Product
                 </div>

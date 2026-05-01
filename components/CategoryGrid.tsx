@@ -20,7 +20,7 @@ export default function CategoryGrid() {
           {categories.map((cat) => (
             <button
               key={cat.name}
-              className="group relative flex aspect-[4/5] flex-col overflow-hidden rounded-lg bg-slate-100 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              className="group relative flex aspect-[3/2] flex-col overflow-hidden rounded-lg bg-slate-100 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
               <Image
                 src={cat.image}

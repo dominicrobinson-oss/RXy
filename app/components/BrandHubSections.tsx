@@ -67,7 +67,7 @@ const faqs = [
 export default function BrandHubSections() {
   return (
     <section className="py-12 md:py-14 bg-[#f7f8fa] border-y border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 space-y-12">
+      <div className="max-w-screen-xl mx-auto px-4 space-y-12">
         <div>
           <h2 className="text-2xl md:text-3xl font-extrabold text-[#123742] mb-4">WHAT’S NEW</h2>
           <div className="grid md:grid-cols-3 gap-4">
@@ -98,7 +98,7 @@ export default function BrandHubSections() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {gymBagEssentials.map((item) => (
               <article key={item.name} className="rounded-md border border-gray-200 bg-white overflow-hidden shadow-[0_8px_20px_rgba(0,0,0,0.05)]">
-                <div className="relative h-36 bg-gray-100">
+                <div className="relative aspect-[3/2] bg-gray-100">
                   <Image
                     src={item.image}
                     alt={item.name}

@@ -111,7 +111,7 @@ const featuredProducts: Product[] = [
 export default function ProductsGrid() {
   return (
     <section className="py-12 md:py-14 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-screen-xl mx-auto px-4">
         <p className="text-[11px] uppercase tracking-[0.08em] font-bold text-[#0b4b59] mb-1">Trending</p>
         <h2 className="text-[30px] md:text-[38px] font-extrabold mb-2 text-[#101820]">Best Sellers</h2>
         <p className="text-gray-600 mb-7 md:mb-9 text-sm md:text-base">Trending this week</p>

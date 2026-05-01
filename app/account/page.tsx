@@ -5,7 +5,7 @@ export default function AccountPage() {
         <h1 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight pt-10 pb-6">Account</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-[16rem_1fr] gap-10">
-          <aside className="hidden md:block w-64 bg-white shadow-sm rounded-lg p-6 space-y-4 text-sm font-medium">
+          <aside className="hidden md:block md:w-full bg-white shadow-sm rounded-lg p-6 space-y-4 text-sm font-medium">
             <nav aria-label="Account navigation">
               <ul className="space-y-4">
                 <li>Dashboard</li>

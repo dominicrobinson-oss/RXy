@@ -12,7 +12,7 @@ export default function MobileDrawer() {
     <>
       {/* Overlay */}
       <div
-        className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-50 transition-opacity duration-300 ${
+        className={`fixed inset-0 md:hidden bg-black/40 backdrop-blur-sm z-50 transition-opacity duration-300 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={close}
@@ -20,11 +20,11 @@ export default function MobileDrawer() {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-[85%] max-w-[320px] bg-white z-50 ${
-          isOpen ? "drawer-open" : "drawer-closed"
+        className={`fixed top-0 left-0 md:hidden h-full w-full max-w-sm bg-white z-50 transform transition-transform duration-300 ease-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full pointer-events-none"
         }`}
       >
-        <div className="flex items-center justify-between h-16 px-4 border-b">
+        <div className="flex items-center justify-between px-4 py-4 border-b">
           <span className="text-lg font-semibold">Menu</span>
           <button onClick={close} aria-label="Close menu">
             <X size={26} />

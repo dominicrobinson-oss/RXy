@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function HeroBanner() {
   return (
     <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 py-4 md:py-5">
+      <div className="max-w-screen-xl mx-auto px-4 py-10 md:py-14 lg:py-20">
         <div className="grid md:grid-cols-2 gap-4 items-stretch bg-[#004655] border border-[#d8e2e5] rounded-md overflow-hidden shadow-[0_10px_24px_rgba(0,0,0,0.08)]">
           <div className="p-7 md:p-10 text-white flex flex-col justify-center">
             <span className="inline-block w-fit bg-[#e85d2a] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] mb-3">
@@ -18,7 +18,7 @@ export default function HeroBanner() {
             </button>
           </div>
 
-          <div className="relative min-h-[280px] md:min-h-[460px] bg-[#e85d2a]">
+          <div className="relative aspect-[3/2] bg-[#e85d2a]">
             <Image
               src="https://images.unsplash.com/photo-1584124864456-cbbf17f3049e?w=1200&h=900&fit=crop"
               alt="Featured supplements"

@@ -2,9 +2,9 @@ export default function MegaMenuSnacks() {
   return (
     <div
       id="megamenu-snacks"
-      className="absolute left-1/2 top-full -translate-x-1/2 mt-2 w-[900px] bg-white shadow-xl rounded-lg z-50 animate-slideDown"
+      className="absolute left-1/2 top-full -translate-x-1/2 mt-2 w-[calc(100vw-2rem)] max-w-screen-xl bg-white shadow-xl rounded-lg z-50 animate-slideDown"
     >
-      <div className="max-w-7xl mx-auto px-10 py-8 grid grid-cols-4 gap-10">
+      <div className="max-w-screen-xl mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div>
           <h3 className="text-sm font-semibold mb-3">Bars, Snacks &amp; Foods</h3>
           <ul className="space-y-2 text-sm">
