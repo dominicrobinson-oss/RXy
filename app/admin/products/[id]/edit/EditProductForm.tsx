@@ -60,11 +60,13 @@ export default function EditProductForm({ product }: { product: Product }) {
       <input
         name="name"
         defaultValue={product.name}
+        placeholder="Product name"
         className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
       />
       <textarea
         name="description"
         defaultValue={product.description}
+        placeholder="Product description"
         className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
         rows={4}
       />
@@ -73,16 +75,19 @@ export default function EditProductForm({ product }: { product: Product }) {
         type="number"
         step="0.01"
         defaultValue={product.price.toString()}
+        placeholder="Price (e.g. 24.99)"
         className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
       />
       <input
         name="category"
         defaultValue={product.category}
+        placeholder="Category"
         className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
       />
       <textarea
         name="images"
         defaultValue={product.images.join("\n")}
+        placeholder="Image URLs, one per line"
         className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
         rows={4}
       />

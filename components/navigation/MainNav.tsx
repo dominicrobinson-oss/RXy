@@ -26,6 +26,7 @@ export default function MainNav() {
 
   // Mount guard + touch detection
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true)
     const touch =
       'ontouchstart' in window || navigator.maxTouchPoints > 0
@@ -111,7 +112,7 @@ export default function MainNav() {
           >
             <button
               aria-haspopup="true"
-              aria-expanded={openMenu === 'trending'}
+              aria-expanded={openMenu === 'trending' ? 'true' : 'false'}
               aria-controls="megamenu-trending"
               onClick={(e) => {
                 e.preventDefault()
@@ -133,7 +134,7 @@ export default function MainNav() {
           >
             <button
               aria-haspopup="true"
-              aria-expanded={openMenu === 'protein'}
+              aria-expanded={openMenu === 'protein' ? 'true' : 'false'}
               aria-controls="megamenu-protein"
               onClick={(e) => {
                 e.preventDefault()
@@ -155,7 +156,7 @@ export default function MainNav() {
           >
             <button
               aria-haspopup="true"
-              aria-expanded={openMenu === 'supplements'}
+              aria-expanded={openMenu === 'supplements' ? 'true' : 'false'}
               aria-controls="megamenu-supplements"
               onClick={(e) => {
                 e.preventDefault()
@@ -177,7 +178,7 @@ export default function MainNav() {
           >
             <button
               aria-haspopup="true"
-              aria-expanded={openMenu === 'vitamins'}
+              aria-expanded={openMenu === 'vitamins' ? 'true' : 'false'}
               aria-controls="megamenu-vitamins"
               onClick={(e) => {
                 e.preventDefault()
@@ -199,7 +200,7 @@ export default function MainNav() {
           >
             <button
               aria-haspopup="true"
-              aria-expanded={openMenu === 'snacks'}
+              aria-expanded={openMenu === 'snacks' ? 'true' : 'false'}
               aria-controls="megamenu-snacks"
               onClick={(e) => {
                 e.preventDefault()
@@ -221,7 +222,7 @@ export default function MainNav() {
           >
             <button
               aria-haspopup="true"
-              aria-expanded={openMenu === 'accessories'}
+              aria-expanded={openMenu === 'accessories' ? 'true' : 'false'}
               aria-controls="megamenu-accessories"
               onClick={(e) => {
                 e.preventDefault()
@@ -243,7 +244,7 @@ export default function MainNav() {
           >
             <button
               aria-haspopup="true"
-              aria-expanded={openMenu === 'collabs'}
+              aria-expanded={openMenu === 'collabs' ? 'true' : 'false'}
               aria-controls="megamenu-collabs"
               onClick={(e) => {
                 e.preventDefault()
@@ -265,7 +266,7 @@ export default function MainNav() {
           >
             <button
               aria-haspopup="true"
-              aria-expanded={openMenu === 'clearance'}
+              aria-expanded={openMenu === 'clearance' ? 'true' : 'false'}
               aria-controls="megamenu-clearance"
               onClick={(e) => {
                 e.preventDefault()
