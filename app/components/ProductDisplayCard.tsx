@@ -28,8 +28,8 @@ export default function ProductDisplayCard({
         )}
       </div>
       <div className="space-y-2">
-        <h3 className="text-sm font-medium line-clamp-2">{name}</h3>
-        <p className="text-base font-semibold">£{price}</p>
+        <h3 className="text-sm font-medium leading-tight line-clamp-2">{name}</h3>
+        <p className="text-base font-bold">£{price}</p>
       </div>
       {actions && <div className="mt-4 flex items-center gap-3 text-sm">{actions}</div>}
     </>

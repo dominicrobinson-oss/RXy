@@ -24,13 +24,13 @@ export default function PromoBlocks() {
   return (
     <section className="py-16">
       <div className="max-w-6xl mx-auto px-4 space-y-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
           {promos.map((promo) => (
             <div
               key={promo.id}
-              className="relative min-h-[300px] overflow-hidden rounded-lg bg-slate-900 text-white shadow-sm md:min-h-[340px]"
+              className="group relative overflow-hidden rounded-lg bg-slate-900 text-white shadow-sm transition-transform duration-300 hover:scale-[1.02]"
             >
-              <div className="absolute inset-0">
+              <div className="relative aspect-[3/2]">
                 <Image
                   src={promo.image}
                   alt={promo.title}
@@ -38,7 +38,7 @@ export default function PromoBlocks() {
                   className="object-cover opacity-70"
                 />
               </div>
-              <div className="relative -translate-y-[2px] flex h-full flex-col justify-end gap-2 p-6 text-left sm:p-8">
+              <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end gap-2 p-6 text-left md:p-8">
                 <h3 className="text-lg font-semibold uppercase tracking-[0.08em] text-slate-100 md:text-xl">
                   {promo.title}
                 </h3>

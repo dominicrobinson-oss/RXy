@@ -2,7 +2,7 @@ export default function MegaMenuCollabs() {
   return (
     <div
       id="megamenu-collabs"
-      className="absolute left-0 top-full w-screen border-t border-gray-200 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.12)] animate-slideDown z-50"
+      className="absolute left-1/2 top-full -translate-x-1/2 mt-2 w-[900px] bg-white shadow-xl rounded-lg z-50 animate-slideDown"
     >
       <div className="max-w-7xl mx-auto px-10 py-8 grid grid-cols-4 gap-10">
         <div>

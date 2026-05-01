@@ -2,47 +2,47 @@ export default function Footer() {
   return (
     <footer className="py-16 bg-black text-white">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="font-semibold text-white mb-4 text-[12px] uppercase tracking-[0.08em]">Help & Information</h3>
-            <ul className="space-y-2 text-[13px]">
-              <li><a href="#" className="hover:text-white">Contact us</a></li>
-              <li><a href="#" className="hover:text-white">Returns</a></li>
-              <li><a href="#" className="hover:text-white">International delivery</a></li>
-              <li><a href="#" className="hover:text-white">Track my order</a></li>
-              <li><a href="#" className="hover:text-white">UK delivery</a></li>
+            <h3 className="mb-4 text-[12px] font-semibold uppercase tracking-[0.08em] text-white">Help & Information</h3>
+            <ul className="space-y-3">
+              <li><a href="#" className="text-sm hover:text-white">Contact us</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Returns</a></li>
+              <li><a href="#" className="text-sm hover:text-white">International delivery</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Track my order</a></li>
+              <li><a href="#" className="text-sm hover:text-white">UK delivery</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4 text-[12px] uppercase tracking-[0.08em]">Products</h3>
-            <ul className="space-y-2 text-[13px]">
-              <li><a href="#" className="hover:text-white">Protein</a></li>
-              <li><a href="#" className="hover:text-white">Bars, drinks & snacks</a></li>
-              <li><a href="#" className="hover:text-white">Nutrition</a></li>
-              <li><a href="#" className="hover:text-white">Vitamins</a></li>
+            <h3 className="mb-4 text-[12px] font-semibold uppercase tracking-[0.08em] text-white">Products</h3>
+            <ul className="space-y-3">
+              <li><a href="#" className="text-sm hover:text-white">Protein</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Bars, drinks & snacks</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Nutrition</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Vitamins</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4 text-[12px] uppercase tracking-[0.08em]">Company Information</h3>
-            <ul className="space-y-2 text-[13px]">
-              <li><a href="#" className="hover:text-white">About us</a></li>
-              <li><a href="#" className="hover:text-white">Quality assurance</a></li>
-              <li><a href="#" className="hover:text-white">Sustainability</a></li>
-              <li><a href="#" className="hover:text-white">Accessibility</a></li>
-              <li><a href="#" className="hover:text-white">Careers</a></li>
+            <h3 className="mb-4 text-[12px] font-semibold uppercase tracking-[0.08em] text-white">Company Information</h3>
+            <ul className="space-y-3">
+              <li><a href="#" className="text-sm hover:text-white">About us</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Quality assurance</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Sustainability</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Accessibility</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Careers</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4 text-[12px] uppercase tracking-[0.08em]">Loyalty & Rewards</h3>
-            <ul className="space-y-2 text-[13px]">
-              <li><a href="#" className="hover:text-white">Refer a friend</a></li>
-              <li><a href="#" className="hover:text-white">Discount codes</a></li>
-              <li><a href="#" className="hover:text-white">Students & graduate discounts</a></li>
-              <li><a href="#" className="hover:text-white">Key worker discounts</a></li>
-              <li><a href="#" className="hover:text-white">What Moves You</a></li>
+            <h3 className="mb-4 text-[12px] font-semibold uppercase tracking-[0.08em] text-white">Loyalty & Rewards</h3>
+            <ul className="space-y-3">
+              <li><a href="#" className="text-sm hover:text-white">Refer a friend</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Discount codes</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Students & graduate discounts</a></li>
+              <li><a href="#" className="text-sm hover:text-white">Key worker discounts</a></li>
+              <li><a href="#" className="text-sm hover:text-white">What Moves You</a></li>
             </ul>
           </div>
         </div>

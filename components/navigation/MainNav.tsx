@@ -76,6 +76,9 @@ export default function MainNav() {
     })
   }
 
+  const navButtonClass =
+    'relative px-3 py-2 text-[15px] font-semibold tracking-[0.3px] hover:text-black after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-full after:bg-black after:scale-x-0 after:origin-center after:transition-transform after:duration-200 hover:after:scale-x-100'
+
   // Keyboard support
   const handleButtonKeyDown = (e: React.KeyboardEvent, menu: string) => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -102,9 +105,9 @@ export default function MainNav() {
 
           {/* TRENDING */}
           <li
-            className="relative"
-            onMouseLeave={closeWithDelay}
+            className="relative inline-block"
             onMouseEnter={() => openWithDelay('trending')}
+            onMouseLeave={closeWithDelay}
           >
             <button
               aria-haspopup="true"
@@ -115,7 +118,7 @@ export default function MainNav() {
                 setOpenMenu(openMenu === 'trending' ? null : 'trending')
               }}
               onKeyDown={(e) => handleButtonKeyDown(e, 'trending')}
-              className="px-[14px] py-[18px] text-[15px] font-semibold tracking-[0.3px] hover:text-black hover:underline hover:underline-offset-[6px] hover:decoration-[2px]"
+              className={navButtonClass}
             >
               Trending
             </button>
@@ -124,9 +127,9 @@ export default function MainNav() {
 
           {/* PROTEIN */}
           <li
-            className="relative"
-            onMouseLeave={closeWithDelay}
+            className="relative inline-block"
             onMouseEnter={() => openWithDelay('protein')}
+            onMouseLeave={closeWithDelay}
           >
             <button
               aria-haspopup="true"
@@ -137,7 +140,7 @@ export default function MainNav() {
                 setOpenMenu(openMenu === 'protein' ? null : 'protein')
               }}
               onKeyDown={(e) => handleButtonKeyDown(e, 'protein')}
-              className="px-[14px] py-[18px] text-[15px] font-semibold tracking-[0.3px] hover:text-black hover:underline hover:underline-offset-[6px] hover:decoration-[2px]"
+              className={navButtonClass}
             >
               Protein
             </button>
@@ -146,9 +149,9 @@ export default function MainNav() {
 
           {/* SUPPLEMENTS */}
           <li
-            className="relative"
-            onMouseLeave={closeWithDelay}
+            className="relative inline-block"
             onMouseEnter={() => openWithDelay('supplements')}
+            onMouseLeave={closeWithDelay}
           >
             <button
               aria-haspopup="true"
@@ -159,7 +162,7 @@ export default function MainNav() {
                 setOpenMenu(openMenu === 'supplements' ? null : 'supplements')
               }}
               onKeyDown={(e) => handleButtonKeyDown(e, 'supplements')}
-              className="px-[14px] py-[18px] text-[15px] font-semibold tracking-[0.3px] hover:text-black hover:underline hover:underline-offset-[6px] hover:decoration-[2px]"
+              className={navButtonClass}
             >
               Supplements
             </button>
@@ -168,9 +171,9 @@ export default function MainNav() {
 
           {/* VITAMINS */}
           <li
-            className="relative"
-            onMouseLeave={closeWithDelay}
+            className="relative inline-block"
             onMouseEnter={() => openWithDelay('vitamins')}
+            onMouseLeave={closeWithDelay}
           >
             <button
               aria-haspopup="true"
@@ -181,7 +184,7 @@ export default function MainNav() {
                 setOpenMenu(openMenu === 'vitamins' ? null : 'vitamins')
               }}
               onKeyDown={(e) => handleButtonKeyDown(e, 'vitamins')}
-              className="px-[14px] py-[18px] text-[15px] font-semibold tracking-[0.3px] hover:text-black hover:underline hover:underline-offset-[6px] hover:decoration-[2px]"
+              className={navButtonClass}
             >
               Vitamins
             </button>
@@ -190,9 +193,9 @@ export default function MainNav() {
 
           {/* SNACKS */}
           <li
-            className="relative"
-            onMouseLeave={closeWithDelay}
+            className="relative inline-block"
             onMouseEnter={() => openWithDelay('snacks')}
+            onMouseLeave={closeWithDelay}
           >
             <button
               aria-haspopup="true"
@@ -203,7 +206,7 @@ export default function MainNav() {
                 setOpenMenu(openMenu === 'snacks' ? null : 'snacks')
               }}
               onKeyDown={(e) => handleButtonKeyDown(e, 'snacks')}
-              className="px-[14px] py-[18px] text-[15px] font-semibold tracking-[0.3px] hover:text-black hover:underline hover:underline-offset-[6px] hover:decoration-[2px]"
+              className={navButtonClass}
             >
               Bars, Snacks & Foods
             </button>
@@ -212,9 +215,9 @@ export default function MainNav() {
 
           {/* ACCESSORIES */}
           <li
-            className="relative"
-            onMouseLeave={closeWithDelay}
+            className="relative inline-block"
             onMouseEnter={() => openWithDelay('accessories')}
+            onMouseLeave={closeWithDelay}
           >
             <button
               aria-haspopup="true"
@@ -225,7 +228,7 @@ export default function MainNav() {
                 setOpenMenu(openMenu === 'accessories' ? null : 'accessories')
               }}
               onKeyDown={(e) => handleButtonKeyDown(e, 'accessories')}
-              className="px-[14px] py-[18px] text-[15px] font-semibold tracking-[0.3px] hover:text-black hover:underline hover:underline-offset-[6px] hover:decoration-[2px]"
+              className={navButtonClass}
             >
               Accessories
             </button>
@@ -234,9 +237,9 @@ export default function MainNav() {
 
           {/* COLLABS */}
           <li
-            className="relative"
-            onMouseLeave={closeWithDelay}
+            className="relative inline-block"
             onMouseEnter={() => openWithDelay('collabs')}
+            onMouseLeave={closeWithDelay}
           >
             <button
               aria-haspopup="true"
@@ -247,7 +250,7 @@ export default function MainNav() {
                 setOpenMenu(openMenu === 'collabs' ? null : 'collabs')
               }}
               onKeyDown={(e) => handleButtonKeyDown(e, 'collabs')}
-              className="px-[14px] py-[18px] text-[15px] font-semibold tracking-[0.3px] hover:text-black hover:underline hover:underline-offset-[6px] hover:decoration-[2px]"
+              className={navButtonClass}
             >
               Collabs
             </button>
@@ -256,9 +259,9 @@ export default function MainNav() {
 
           {/* CLEARANCE */}
           <li
-            className="relative"
-            onMouseLeave={closeWithDelay}
+            className="relative inline-block"
             onMouseEnter={() => openWithDelay('clearance')}
+            onMouseLeave={closeWithDelay}
           >
             <button
               aria-haspopup="true"
@@ -269,7 +272,7 @@ export default function MainNav() {
                 setOpenMenu(openMenu === 'clearance' ? null : 'clearance')
               }}
               onKeyDown={(e) => handleButtonKeyDown(e, 'clearance')}
-              className="px-[14px] py-[18px] text-[15px] font-semibold tracking-[0.3px] hover:text-black hover:underline hover:underline-offset-[6px] hover:decoration-[2px]"
+              className={navButtonClass}
             >
               Clearance
             </button>

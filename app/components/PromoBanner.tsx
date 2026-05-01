@@ -6,8 +6,10 @@ export default function PromoBanner() {
           UP TO 70% OFF PAYDAY SALE + EXTRA 15% OFF VIA APP | USE CODE "APPY"
         </p>
 
-        <div className="hidden md:flex items-center gap-2 text-[10px] tracking-[0.04em] text-white/90 shrink-0">
-          <span>Ends soon</span>
+        <div className="hidden md:flex items-center shrink-0">
+          <span className="inline-block rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gray-900">
+            Ends soon
+          </span>
         </div>
       </div>
     </section>

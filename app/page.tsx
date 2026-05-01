@@ -6,6 +6,9 @@ import BestSellers from "@/components/BestSellers";
 import PromoBlocks from "@/components/PromoBlocks";
 import Newsletter from "@/components/Newsletter";
 
+
+export const dynamic = 'force-dynamic';
+
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col bg-white">

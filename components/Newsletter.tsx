@@ -11,9 +11,9 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-16 bg-[#f5f5f5]">
+    <section className="bg-[#f5f5f5] py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center space-y-6">
+        <div className="mx-auto max-w-2xl space-y-6 text-center md:text-left">
           <h2 className="text-3xl font-semibold tracking-tight">Sign up &amp; save</h2>
           <p className="text-gray-600 max-w-2xl">
             Be the first to hear about new products, exclusive offers, and training inspiration.
