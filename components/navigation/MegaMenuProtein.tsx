@@ -6,46 +6,42 @@ export default function MegaMenuProtein() {
     >
       <div className="max-w-7xl mx-auto px-10 py-8 grid grid-cols-4 gap-10">
         <div>
-          <h3 className="text-sm font-semibold mb-3">Shop by Category</h3>
+          <h3 className="text-sm font-semibold mb-3">Protein</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#">Whey Protein</a></li>
-            <li><a href="#">Clear Protein</a></li>
-            <li><a href="#">Isolate Protein</a></li>
-            <li><a href="#">Collagen Protein</a></li>
-            <li><a href="#">Casein Protein</a></li>
-            <li><a href="#">Hydrolysed Protein</a></li>
-            <li><a href="#">Vegan Protein</a></li>
-            <li><a href="#">Protein Bars & Snacks</a></li>
+            <li><a href="/protein">Shop all protein</a></li>
+            <li><a href="/protein/whey">Whey</a></li>
+            <li><a href="/protein/vegan">Vegan</a></li>
+            <li><a href="/protein/clear-whey">Clear whey</a></li>
+            <li><a href="/protein/casein">Casein</a></li>
+            <li><a href="/protein/bundles">Bundles</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold mb-3">Shop by Benefit</h3>
+          <h3 className="text-sm font-semibold mb-3">Popular With Protein</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#">Build Muscle</a></li>
-            <li><a href="#">Weight Gain</a></li>
-            <li><a href="#">Diet</a></li>
-            <li><a href="#">Recovery</a></li>
+            <li><a href="/supplements/creatine">Creatine</a></li>
+            <li><a href="/supplements/pre-workout">Pre-workout</a></li>
+            <li><a href="/snacks/bars">Bars</a></li>
+            <li><a href="/vitamins/multivitamins">Multivitamins</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold mb-3">Shop by Range</h3>
+          <h3 className="text-sm font-semibold mb-3">Trending Choices</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#">Impact</a></li>
-            <li><a href="#">Origin</a></li>
-            <li><a href="#">PRO</a></li>
+            <li><a href="/trending/bestsellers">Protein bestsellers</a></li>
+            <li><a href="/trending/new">New protein launches</a></li>
+            <li><a href="/clearance/protein">Protein clearance</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold mb-3">Shop by Diet</h3>
+          <h3 className="text-sm font-semibold mb-3">Explore More</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#">Vegan</a></li>
-            <li><a href="#">Vegetarian</a></li>
-            <li><a href="#">Informed Choice</a></li>
-            <li><a href="#">Informed Sport</a></li>
-            <li><a href="#">Informed Protein</a></li>
+            <li><a href="/supplements">Supplements</a></li>
+            <li><a href="/snacks">Bars, snacks &amp; foods</a></li>
+            <li><a href="/accessories">Accessories</a></li>
           </ul>
         </div>
 

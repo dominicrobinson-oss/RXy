@@ -41,10 +41,10 @@ const items: Item[] = [
 
 export default function NewInActivewear() {
   return (
-    <section className="py-16 bg-[#fafafa]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-6 flex items-baseline justify-between">
-          <h2 className="text-2xl font-bold uppercase tracking-[0.08em] text-slate-800">
+    <section className="py-10 md:py-14 lg:py-20 bg-[#fafafa]">
+      <div className="mx-auto max-w-screen-xl px-4">
+        <div className="mb-6 flex flex-wrap items-baseline justify-between gap-3">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold uppercase tracking-[0.08em] text-slate-800">
             New in activewear
           </h2>
           <button className="text-xs font-semibold uppercase tracking-wide text-[#0071e3] hover:underline">
@@ -52,7 +52,7 @@ export default function NewInActivewear() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item) => (
             <div
               key={item.id}

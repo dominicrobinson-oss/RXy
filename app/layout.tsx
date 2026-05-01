@@ -36,7 +36,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
     >
-      <body className="min-h-screen flex flex-col bg-white antialiased">
+      <body className="min-h-screen flex flex-col bg-white antialiased overflow-x-hidden">
         {/* Mobile drawer logic (scroll lock, escape key) */}
         <MobileNavEffects />
 

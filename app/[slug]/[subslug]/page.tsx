@@ -32,12 +32,12 @@ export default async function SubcategoryPage({
   }
 
   return (
-    <main className="py-16">
-      <div className="max-w-6xl mx-auto px-4">
+    <main className="py-10 md:py-14 lg:py-20">
+      <div className="max-w-screen-xl mx-auto px-4">
         <p className="text-sm text-gray-500 mb-2">
           Category / {titleFromSlug(slug)} / {titleFromSlug(subslug)}
         </p>
-        <h1 className="text-3xl font-semibold tracking-tight mb-3">{titleFromSlug(subslug)}</h1>
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight mb-3">{titleFromSlug(subslug)}</h1>
         <p className="text-gray-600 max-w-2xl mb-8">
           This subcategory page is ready. Next step: connect real product data and filtering.
         </p>

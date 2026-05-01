@@ -116,7 +116,7 @@ export default function ProductsGrid() {
         <h2 className="text-[30px] md:text-[38px] font-extrabold mb-2 text-[#101820]">Best Sellers</h2>
         <p className="text-gray-600 mb-7 md:mb-9 text-sm md:text-base">Trending this week</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

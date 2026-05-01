@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroBanner() {
   return (
-    <section className="relative overflow-hidden bg-[#f5f5f5] text-black py-16">
+    <section className="relative overflow-hidden bg-[#f5f5f5] text-black py-10 md:py-14 lg:py-20">
       <div className="absolute inset-0">
         <Image
           src="/images/hero-payday-sale.jpg"
@@ -15,12 +15,12 @@ export default function HeroBanner() {
         />
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-4 space-y-6">
+      <div className="relative max-w-screen-xl mx-auto px-4 space-y-6">
         <div className="max-w-xl">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#00d4ff]">
             PAYDAY SALE
           </p>
-          <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight">
             Up to <span className="text-[#00d4ff]">70% off</span>
             <br />
             + extra 20% off

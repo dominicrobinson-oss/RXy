@@ -6,40 +6,40 @@ export default function MegaMenuVitamins() {
     >
       <div className="max-w-7xl mx-auto px-10 py-8 grid grid-cols-4 gap-10">
         <div>
-          <h3 className="text-sm font-semibold mb-3">Shop by Category</h3>
+          <h3 className="text-sm font-semibold mb-3">Vitamins</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#">Multivitamins</a></li>
-            <li><a href="#">Vitamin D</a></li>
-            <li><a href="#">Omega-3</a></li>
-            <li><a href="#">Immunity</a></li>
-            <li><a href="#">Wellbeing</a></li>
+            <li><a href="/vitamins">Shop all vitamins</a></li>
+            <li><a href="/vitamins/multivitamins">Multivitamins</a></li>
+            <li><a href="/vitamins/immunity">Immunity</a></li>
+            <li><a href="/vitamins/wellbeing">Wellbeing</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold mb-3">Shop by Benefit</h3>
+          <h3 className="text-sm font-semibold mb-3">Paired Support</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#">Immunity</a></li>
-            <li><a href="#">Energy</a></li>
-            <li><a href="#">Sleep</a></li>
-            <li><a href="#">Stress Support</a></li>
+            <li><a href="/supplements/recovery">Recovery support</a></li>
+            <li><a href="/supplements/energy">Energy support</a></li>
+            <li><a href="/protein/vegan">Vegan-friendly range</a></li>
+            <li><a href="/snacks/foods">Functional foods</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold mb-3">Top Ranges</h3>
+          <h3 className="text-sm font-semibold mb-3">Trending In Health</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#">Daily Multivitamin</a></li>
-            <li><a href="#">Omega Balance</a></li>
-            <li><a href="#">Wellness Essentials</a></li>
+            <li><a href="/trending/bestsellers">Health bestsellers</a></li>
+            <li><a href="/trending/new">New launches</a></li>
+            <li><a href="/trending/offers">Current offers</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold mb-3">Quick Links</h3>
+          <h3 className="text-sm font-semibold mb-3">Explore More</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#">Shop All Vitamins</a></li>
-            <li><a href="#">Offers</a></li>
+            <li><a href="/supplements">Supplements</a></li>
+            <li><a href="/clearance/supplements">Supplements clearance</a></li>
+            <li><a href="/products">All products</a></li>
           </ul>
         </div>
 

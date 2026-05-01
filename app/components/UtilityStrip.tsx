@@ -21,11 +21,11 @@ const utilityItems = [
 
 export default function UtilityStrip() {
   return (
-    <section className="bg-white border-b border-gray-200 py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="bg-white border-b border-gray-200 py-10 md:py-14 lg:py-20">
+      <div className="max-w-screen-xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {utilityItems.map((item) => (
-            <p key={item.text} className="text-[11px] md:text-[12px] font-medium text-gray-700 leading-tight flex items-center gap-1.5 whitespace-nowrap">
+            <p key={item.text} className="text-[11px] md:text-[12px] font-medium text-gray-700 leading-tight flex items-center gap-1.5">
               <item.icon size={12} className="text-[#0b4b59] shrink-0" />
               <span>{item.text}</span>
             </p>

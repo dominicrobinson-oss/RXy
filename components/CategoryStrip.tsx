@@ -12,8 +12,8 @@ const categories = [
 
 export default function CategoryStrip() {
   return (
-    <section className="w-full bg-white py-16">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="w-full bg-white py-10 md:py-14 lg:py-20">
+      <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex gap-x-8 whitespace-nowrap overflow-x-auto scrollbar-none pb-1">
           {categories.map((category) => {
             const Icon = category.icon;

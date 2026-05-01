@@ -1,22 +1,22 @@
 export default function CheckoutPage() {
   return (
-    <main className="py-16">
-      <div className="max-w-6xl mx-auto px-4">
+    <main className="py-10 md:py-14 lg:py-20">
+      <div className="max-w-screen-xl mx-auto px-4">
         <div className="space-y-4">
-          <h1 className="text-3xl font-semibold tracking-tight">Checkout</h1>
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight">Checkout</h1>
           <p className="text-gray-600 max-w-2xl">
             Enter your details to complete your order. This is a layout
             skeleton ready for integration.
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <section className="space-y-8">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <section className="space-y-8 lg:col-span-2">
             <div className="space-y-4">
               <h2 className="text-sm font-semibold tracking-tight">
                 Shipping details
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <input
                   className="border border-gray-300 rounded-md px-3 py-2 text-sm"
                   placeholder="First name"
@@ -44,7 +44,7 @@ export default function CheckoutPage() {
               <h2 className="text-sm font-semibold tracking-tight">
                 Payment details
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <input
                   className="border border-gray-300 rounded-md px-3 py-2 text-sm sm:col-span-2"
                   placeholder="Card number"

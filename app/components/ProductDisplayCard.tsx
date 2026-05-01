@@ -18,7 +18,7 @@ export default function ProductDisplayCard({
 }: ProductDisplayCardProps) {
   const content = (
     <>
-      <div className="aspect-[4/5] bg-gray-100 rounded-md mb-4 overflow-hidden">
+      <div className="aspect-square bg-gray-100 rounded-md mb-4 overflow-hidden">
         {image && (
           <img
             src={image}
@@ -31,7 +31,7 @@ export default function ProductDisplayCard({
         <h3 className="text-sm font-medium leading-tight line-clamp-2">{name}</h3>
         <p className="text-base font-bold">£{price}</p>
       </div>
-      {actions && <div className="mt-4 flex items-center gap-3 text-sm">{actions}</div>}
+      {actions && <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">{actions}</div>}
     </>
   );
 

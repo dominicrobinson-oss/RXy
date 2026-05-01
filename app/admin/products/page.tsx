@@ -11,11 +11,11 @@ export default async function AdminProductsPage() {
   });
 
   return (
-    <main className="py-16">
-      <div className="max-w-6xl mx-auto px-4 space-y-6">
-        <div className="flex items-center justify-between">
-          <h1 className="text-3xl font-semibold tracking-tight">Products</h1>
-          <div className="flex items-center gap-3">
+    <main className="py-10 md:py-14 lg:py-20">
+      <div className="max-w-screen-xl mx-auto px-4 space-y-6">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight">Products</h1>
+          <div className="flex flex-wrap items-center gap-3">
             <Link
               href="/admin/products/new"
               className="inline-flex items-center px-4 py-2 bg-black text-white text-sm font-medium hover:bg-gray-900 transition-colors"
@@ -35,7 +35,7 @@ export default async function AdminProductsPage() {
 
         <p className="text-gray-600 max-w-2xl">Manage live products, pricing, and content.</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (
             <ProductDisplayCard
               key={product.id}

@@ -11,12 +11,12 @@ import Image from "next/image";
 
 export default function CategoryGrid() {
   return (
-    <section className="bg-white py-14">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="mb-4 text-xl font-bold uppercase tracking-wider">
+    <section className="bg-white py-10 md:py-14 lg:py-20">
+      <div className="mx-auto max-w-screen-xl px-4">
+        <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold uppercase tracking-wider">
           Shop by category
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat) => (
             <button
               key={cat.name}

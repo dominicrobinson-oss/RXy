@@ -77,7 +77,7 @@ export default function MainNav() {
   }
 
   const navButtonClass =
-    'relative px-3 py-2 text-[15px] font-semibold tracking-[0.3px] hover:text-black after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-full after:bg-black after:scale-x-0 after:origin-center after:transition-transform after:duration-200 hover:after:scale-x-100'
+    "relative px-3 py-2 text-[15px] font-semibold tracking-[0.3px] hover:text-black after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-full after:bg-black after:scale-x-0 after:origin-center after:transition-transform after:duration-200 hover:after:scale-x-100"
 
   // Keyboard support
   const handleButtonKeyDown = (e: React.KeyboardEvent, menu: string) => {

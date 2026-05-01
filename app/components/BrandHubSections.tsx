@@ -95,7 +95,7 @@ export default function BrandHubSections() {
 
         <div>
           <h2 className="text-2xl md:text-3xl font-extrabold text-[#123742] mb-4">Gym Bag Essentials</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {gymBagEssentials.map((item) => (
               <article key={item.name} className="rounded-md border border-gray-200 bg-white overflow-hidden shadow-[0_8px_20px_rgba(0,0,0,0.05)]">
                 <div className="relative h-36 bg-gray-100">
