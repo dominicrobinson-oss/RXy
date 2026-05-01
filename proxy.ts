@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { createServerClient } from "@supabase/auth-helpers-nextjs";
+import { ADMIN_SESSION_COOKIE, verifyAdminSessionToken } from "@/lib/adminAuth";
 
 export async function proxy(req: NextRequest) {
   let res = NextResponse.next();
@@ -37,8 +38,12 @@ export async function proxy(req: NextRequest) {
     return res;
   }
 
+  const localAdminSession = verifyAdminSessionToken(
+    req.cookies.get(ADMIN_SESSION_COOKIE)?.value
+  );
+
   // Protect all other /admin routes
-  if (isAdminRoute && !session) {
+  if (isAdminRoute && !session && !localAdminSession) {
     const redirectUrl = req.nextUrl.clone();
     redirectUrl.pathname = "/admin/login";
     redirectUrl.searchParams.set("redirectedFrom", req.nextUrl.pathname);

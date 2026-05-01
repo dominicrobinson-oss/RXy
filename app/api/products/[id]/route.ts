@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { Prisma } from "@prisma/client";
 import { db } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
+import { ADMIN_SESSION_COOKIE, verifyAdminSessionToken } from "@/lib/adminAuth";
 
 type Params = { params: Promise<{ id: string }> };
 
@@ -15,17 +17,28 @@ type ProductPayload = {
 };
 
 async function requireAdminSession() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-    error,
-  } = await supabase.auth.getUser();
+  const cookieStore = await cookies();
+  const localAdminToken = cookieStore.get(ADMIN_SESSION_COOKIE)?.value;
 
-  if (error || !user) {
-    return null;
+  if (verifyAdminSessionToken(localAdminToken)) {
+    return { id: "local-admin" };
   }
 
-  return user;
+  try {
+    const supabase = await createClient();
+    const {
+      data: { user },
+      error,
+    } = await supabase.auth.getUser();
+
+    if (error || !user) {
+      return null;
+    }
+
+    return user;
+  } catch {
+    return null;
+  }
 }
 
 function validateId(id: unknown):

@@ -15,12 +15,22 @@ export default async function AdminProductsPage() {
       <div className="max-w-6xl mx-auto px-4 space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-semibold tracking-tight">Products</h1>
-          <Link
-            href="/admin/products/new"
-            className="inline-flex items-center px-4 py-2 bg-black text-white text-sm font-medium hover:bg-gray-900 transition-colors"
-          >
-            New product
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/admin/products/new"
+              className="inline-flex items-center px-4 py-2 bg-black text-white text-sm font-medium hover:bg-gray-900 transition-colors"
+            >
+              New product
+            </Link>
+            <form action="/api/admin/logout" method="post">
+              <button
+                type="submit"
+                className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
+              >
+                Log out
+              </button>
+            </form>
+          </div>
         </div>
 
         <p className="text-gray-600 max-w-2xl">Manage live products, pricing, and content.</p>
